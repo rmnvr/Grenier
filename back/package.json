@@ -2,5 +2,12 @@
   "name": "back",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "express": "^4.16.4",
+    "nodemailer": "^4.6.8",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "sqlite3": "^4.0.3"
+  }
 }

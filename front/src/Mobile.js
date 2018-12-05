@@ -1,18 +1,10 @@
 import React, { Component } from "react";
-import { Segment } from "semantic-ui-react";
 
 import ProgressBar from "./ProgressBar.js";
 import SideMobile from "./SideMobile.js";
 
 import styles from "./Styles.css.js";
-import {
-  Button,
-  Dimmer,
-  Grid,
-  Header,
-  Reveal,
-  Sidebar
-} from "semantic-ui-react";
+import { Button, Dimmer, Grid, Header } from "semantic-ui-react";
 
 class Mobile extends Component {
   state = {};

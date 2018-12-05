@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, Grid, Menu, Reveal, Sidebar } from "semantic-ui-react";
+import { Button, Form, Grid } from "semantic-ui-react";
 
 import styles from "./Styles.css.js";
 
@@ -34,10 +34,9 @@ class SideMobile extends Component {
   }
 
   render() {
-    const { visible, handleSidebarHide } = this.props;
     return (
       <Grid columns={1} centered>
-        <div onHide={handleSidebarHide}>
+        <div>
           <p style={styles.paragraph}>
             "Soyez le premier informé de l'ouverture, inscrivez-vous !"
           </p>

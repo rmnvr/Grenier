@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ProgressBar from "./ProgressBar.js";
+import ProgressBar from "./Components/ProgressBar.js";
 import SideMobile from "./SideMobile.js";
 
 import styles from "./Styles.css.js";
@@ -18,7 +18,9 @@ class Mobile extends Component {
         <div style={styles.page}>
           <Grid centered>
             <Grid.Row>
-              <h1 style={styles.title}>Mobile</h1>
+              <h1 style={styles.title}>
+                En<br />Construction
+              </h1>
             </Grid.Row>
             <Grid.Row columns={2}>
               <Grid.Column textAlign="center">

@@ -1,23 +1,10 @@
-import React, { Component, Fragment } from "react";
-import MediaQuery from "react-responsive";
+import React, { Component } from "react";
 
-import Desktop from "./Desktop.js";
-import Mobile from "./Mobile.js";
-
-import styles from "./Styles.css.js";
+import Desktop from "./Components/Desktop.js";
 
 class App extends Component {
   render() {
-    return (
-      <Fragment>
-        <MediaQuery query="(min-device-width: 850px)">
-          <Desktop />
-        </MediaQuery>
-        <MediaQuery query="(max-device-width: 850px)">
-          <Mobile />
-        </MediaQuery>
-      </Fragment>
-    );
+    return <Desktop />;
   }
 }
 

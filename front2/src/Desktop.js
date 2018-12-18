@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProgressBar from "./ProgressBar.js";
+import ProgressBar from "./Components/ProgressBar.js";
 import Side from "./Side.js";
 
 import styles from "./Styles.css.js";
@@ -41,24 +41,28 @@ class Desktop extends Component {
                   <Grid relaxed="very" centered columns="equal">
                     <Grid.Row>
                       <Grid.Column textAlign="center">
-                        <Button
-                          circular
-                          basic
-                          size="massive"
-                          inverted
-                          icon="facebook f"
-                          style={styles.networks}
-                        />
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <Button
+                            circular
+                            basic
+                            size="massive"
+                            inverted
+                            icon="facebook f"
+                            style={styles.networks}
+                          />
+                        </a>
                       </Grid.Column>
                       <Grid.Column textAlign="center">
-                        <Button
-                          circular
-                          basic
-                          size="massive"
-                          inverted
-                          icon="linkedin"
-                          style={styles.networks}
-                        />
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <Button
+                            circular
+                            basic
+                            size="massive"
+                            inverted
+                            icon="linkedin"
+                            style={styles.networks}
+                          />
+                        </a>
                       </Grid.Column>
                     </Grid.Row>
                   </Grid>

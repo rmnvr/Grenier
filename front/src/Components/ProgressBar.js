@@ -7,13 +7,14 @@ const styles = {
     flexGrow: 1
   },
   root: {
-    height: "10px"
+    height: "10px",
+    margin: "20px"
   },
   linearColorPrimary: {
-    backgroundColor: "#C4F9E5"
+    backgroundColor: "#A9CBD4"
   },
   linearBarColorPrimary: {
-    backgroundColor: "#50F1B4"
+    backgroundColor: "#2B90A9"
   }
 };
 

@@ -12,14 +12,18 @@ import InIcon from "./Utils/InIcon.js";
 
 let styles = theme => ({
   main: {
-    background: 'url("images/bg1.jpg")',
+    height: "100vh",
+    background: 'url("images/bg2.jpg")',
     backgroundSize: "cover",
-    paddingBottom: "20%"
+    fontFamily: "'Old Standard TT', serif"
   },
   title: {
-    fontFamily: "'Oswald', sans-serif",
     color: "white",
-    fontSize: "4vw",
+    fontSize: "3vw",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "6vw",
+      margin: "5vh"
+    },
     letterSpacing: ".5rem",
     textAlign: "center"
   },
@@ -39,7 +43,9 @@ let styles = theme => ({
     height: "70px"
   },
   side: {
-    backgroundColor: "#0B4452",
+    background: "url(images/bg.png)",
+    backgroundSize: "cover",
+    backgroundPosition: "bottom left",
     width: "40vw",
     [theme.breakpoints.down("md")]: {
       width: "60vw"
@@ -52,8 +58,20 @@ let styles = theme => ({
     width: "100%"
   },
   section: {
-    paddingTop: "10%",
+    fontSize: "1.2rem",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1rem",
+      padding: "40px 10px"
+    },
+    padding: "30px 10px",
+    color: "white",
+    fontFamily: "'Old Standard TT', serif"
+  },
+  link: {
     color: "white"
+  },
+  strip: {
+    maxWidth: "100%"
   }
 });
 
@@ -88,7 +106,7 @@ class Desktop extends Component {
             <Grid item container justify="center" className={classes.section}>
               <a
                 href="mailto:legrenierdebenjamin@gmail.com"
-                style={{ color: "white" }}
+                className={classes.link}
               >
                 legrenierdebenjamin@gmail.com
               </a>
@@ -103,7 +121,16 @@ class Desktop extends Component {
               className={classes.section}
               xs={12}
             >
-              06.73.65.45.25
+              <a href="tel:+33673654525" className={classes.link}>
+                06.73.65.45.25
+              </a>
+            </Grid>
+            <Grid item>
+              <img
+                src="images/bandeau.png"
+                alt="bandeau"
+                className={classes.strip}
+              />
             </Grid>
           </Grid>
         </Grid>
@@ -111,79 +138,83 @@ class Desktop extends Component {
     );
 
     return (
-      <Grid container justify="center" className={classes.main}>
-        <Grid item xs={6}>
-          <img
-            src={"images/logo-blanc.png"}
-            alt="logo"
-            className={classes.image}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <h1 className={classes.title}>
-            EN
-            <br />
-            CONSTRUCTION
-          </h1>
-        </Grid>
-        <Grid item xs={12}>
-          <h4 className={classes.paragraph}>Presque prêt</h4>
-        </Grid>
-        <Grid container row xs={4}>
-          <ProgressBar />
-        </Grid>
-        <Grid
-          container
-          item
-          xs={12}
-          justify="center"
-          className={classes.button}
-        >
-          <Button variant="contained" onClick={this.toggleDrawer(true)}>
-            Contactez-nous
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
-          <h4 className={classes.paragraph}>En attendant, suivez-nous sur :</h4>
-        </Grid>
-        <Grid container item xs={8} sm={4} justify="space-between">
-          <Fab
-            size="large"
-            variant="outlined"
-            className={classes.networks}
-            href="https://www.facebook.com/Le-Grenier-de-Benjamin-216474645899457/"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className={classes.main}>
+        <Grid container justify="center">
+          <Grid item xs={10} sm={8} md={6}>
+            <img
+              src={"images/logo-blanc.png"}
+              alt="logo"
+              className={classes.image}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <p className={classes.title}>
+              EN
+              <br />
+              CONSTRUCTION
+            </p>
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className={classes.paragraph}>Presque prêt</h4>
+          </Grid>
+          <Grid container row xs={8} sm={4}>
+            <ProgressBar />
+          </Grid>
+          <Grid
+            container
+            item
+            xs={12}
+            justify="center"
+            className={classes.button}
           >
-            <FbIcon />
-          </Fab>
-          <Fab
-            size="large"
-            icon="linkedin"
-            className={classes.networks}
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InIcon />
-          </Fab>
-          <Drawer
-            anchor="right"
-            open={this.state.right}
-            onClose={this.toggleDrawer(false)}
-            classes={{ paper: classes.side }}
-          >
-            <div
-              tabIndex={0}
-              role="button"
-              onClick={this.toggleDrawer(false)}
-              onKeyDown={this.toggleDrawer(false)}
+            <Button variant="contained" onClick={this.toggleDrawer(true)}>
+              Contactez-nous
+            </Button>
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className={classes.paragraph}>
+              En attendant, suivez-nous sur :
+            </h4>
+          </Grid>
+          <Grid container item xs={8} sm={4} justify="space-between">
+            <Fab
+              size="large"
+              variant="outlined"
+              className={classes.networks}
+              href="https://www.facebook.com/Le-Grenier-de-Benjamin-216474645899457/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {side}
-            </div>
-          </Drawer>
+              <FbIcon />
+            </Fab>
+            <Fab
+              size="large"
+              icon="linkedin"
+              className={classes.networks}
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InIcon />
+            </Fab>
+            <Drawer
+              anchor="right"
+              open={this.state.right}
+              onClose={this.toggleDrawer(false)}
+              classes={{ paper: classes.side }}
+            >
+              <div
+                tabIndex={0}
+                role="button"
+                onClick={this.toggleDrawer(false)}
+                onKeyDown={this.toggleDrawer(false)}
+              >
+                {side}
+              </div>
+            </Drawer>
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     );
   }
 }

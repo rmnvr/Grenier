@@ -39,7 +39,7 @@ class ProgressBar extends Component {
 
   render() {
     const { classes } = this.props;
-    const { completed, buffer } = this.state;
+    const { completed } = this.state;
 
     return (
       <div className={classes.div}>
@@ -49,10 +49,9 @@ class ProgressBar extends Component {
             colorPrimary: classes.linearColorPrimary,
             barColorPrimary: classes.linearBarColorPrimary
           }}
-          variant="buffer"
+          variant="determinate"
           thickness={20}
           value={completed}
-          valueBuffer={buffer}
           className={classes.progresse}
         />
       </div>

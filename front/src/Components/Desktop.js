@@ -13,7 +13,7 @@ import InIcon from "./Utils/InIcon.js";
 let styles = theme => ({
   main: {
     height: "100vh",
-    background: 'url("images/bg2.jpg")',
+    background: 'url("images/bg3.jpg")',
     backgroundSize: "cover",
     fontFamily: "'Old Standard TT', serif"
   },
@@ -21,8 +21,7 @@ let styles = theme => ({
     color: "white",
     fontSize: "3vw",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "6vw",
-      margin: "5vh"
+      fontSize: "6vw"
     },
     letterSpacing: ".5rem",
     textAlign: "center"
@@ -33,7 +32,8 @@ let styles = theme => ({
     textAlign: "center"
   },
   button: {
-    margin: "3vh"
+    margin: "3vh",
+    borderRadius: 0
   },
   networks: {
     color: "rgba(255, 255, 255, 0.6)",
@@ -55,7 +55,11 @@ let styles = theme => ({
     }
   },
   image: {
-    width: "100%"
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "8vw",
+      marginTop: "4vw"
+    }
   },
   section: {
     fontSize: "1.2rem",
@@ -83,6 +87,14 @@ class Desktop extends Component {
   toggleDrawer = open => () => {
     this.setState({
       right: open
+    });
+    this.googleEvent("clickOnContact", "clicks", "Someone clicked on Contact");
+  };
+
+  googleEvent = (event, category, label) => {
+    window.gtag("event", event, {
+      event_category: category,
+      event_label: label
     });
   };
 
@@ -147,27 +159,25 @@ class Desktop extends Component {
               className={classes.image}
             />
           </Grid>
-          <Grid item xs={12}>
-            <p className={classes.title}>
+          <Grid item xs={12} className={classes.title}>
+            <div>
               EN
               <br />
               CONSTRUCTION
-            </p>
+            </div>
           </Grid>
           <Grid item xs={12}>
             <h4 className={classes.paragraph}>Presque prêt</h4>
           </Grid>
-          <Grid container row xs={8} sm={4}>
+          <Grid container item xs={8} sm={4}>
             <ProgressBar />
           </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            justify="center"
-            className={classes.button}
-          >
-            <Button variant="contained" onClick={this.toggleDrawer(true)}>
+          <Grid container item xs={12} justify="center">
+            <Button
+              variant="contained"
+              onClick={this.toggleDrawer(true)}
+              className={classes.button}
+            >
               Contactez-nous
             </Button>
           </Grid>
@@ -179,11 +189,15 @@ class Desktop extends Component {
           <Grid container item xs={8} sm={4} justify="space-between">
             <Fab
               size="large"
-              variant="outlined"
               className={classes.networks}
               href="https://www.facebook.com/Le-Grenier-de-Benjamin-216474645899457/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={this.googleEvent(
+                "clickOnFacebook",
+                "clicks",
+                "Someone clicked on Facebook"
+              )}
             >
               <FbIcon />
             </Fab>
@@ -191,9 +205,14 @@ class Desktop extends Component {
               size="large"
               icon="linkedin"
               className={classes.networks}
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/company/le-grenier-de-benjamin/ "
               target="_blank"
               rel="noopener noreferrer"
+              onClick={this.googleEvent(
+                "clickOnLinkedin",
+                "clicks",
+                "Someone clicked on Linkedin"
+              )}
             >
               <InIcon />
             </Fab>

@@ -35,6 +35,7 @@ const styles = theme => ({
   },
   link: {
     color: "white",
+    fontWeight: "bold",
     [theme.breakpoints.up("md")]: {
       fontSize: "1.3vw"
     },
@@ -100,7 +101,7 @@ class Navbar extends Component {
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
-                  <Link to="/page2" className={classes.link}>
+                  <Link to="/tournee" className={classes.link}>
                     Tournée
                   </Link>
                 </ListItem>

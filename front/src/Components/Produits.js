@@ -24,7 +24,7 @@ const styles = theme => ({
   }
 });
 
-class Page3 extends Component {
+class Produits extends Component {
   render() {
     const { classes } = this.props;
 
@@ -43,4 +43,4 @@ class Page3 extends Component {
   }
 }
 
-export default withStyles(styles)(Page3);
+export default withStyles(styles)(Produits);

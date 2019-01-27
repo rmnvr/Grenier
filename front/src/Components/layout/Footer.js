@@ -15,7 +15,7 @@ import InIcon from "../utils/InIcon.js";
 const styles = theme => ({
   root: {
     width: "100vw",
-    backgroundColor: "#4F4F4F",
+    backgroundColor: "#0b4553",
     color: "white",
     paddingTop: "10px",
     paddingBottom: "10px",
@@ -43,7 +43,8 @@ const styles = theme => ({
     border: "2px solid",
     backgroundColor: "transparent",
     width: "70px",
-    height: "70px"
+    height: "70px",
+    margin: "15px"
   },
   link: {
     color: "white",
@@ -151,19 +152,19 @@ class Footer extends React.Component {
           <List>
             <ListItem className={classes.listItem}>
               <Link to="/" className={classes.link}>
-                Page 1
+                Accueil
               </Link>
             </ListItem>
 
             <ListItem className={classes.listItem}>
-              <Link to="/page2" className={classes.link}>
-                Page 2
+              <Link to="/tournee" className={classes.link}>
+                Tournée
               </Link>
             </ListItem>
 
             <ListItem className={classes.listItem}>
-              <Link to="/page3" className={classes.link}>
-                Page 3
+              <Link to="/produits" className={classes.link}>
+                Nos Produits
               </Link>
             </ListItem>
           </List>

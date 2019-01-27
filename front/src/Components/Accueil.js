@@ -115,10 +115,7 @@ class Accueil extends Component {
                 <MediaCard content={this.state.a} />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
-                <MediaCard
-                  content={this.state.b}
-                  style={{ backgroundColor: "#e3c04c" }}
-                />
+                <MediaCard content={this.state.b} />
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
                 <MediaCard content={this.state.c} />

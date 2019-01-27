@@ -23,7 +23,8 @@ const styles = theme => ({
   },
   content: {
     textAlign: "justify",
-    lineHeight: 1.5
+    lineHeight: 1.5,
+    color: "white"
   }
 });
 

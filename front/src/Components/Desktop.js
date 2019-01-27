@@ -7,8 +7,8 @@ import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
 
 import ProgressBar from "./ProgressBar.js";
-import FbIcon from "./Utils/FbIcon.js";
-import InIcon from "./Utils/InIcon.js";
+import FbIcon from "./utils/FbIcon.js";
+import InIcon from "./utils/InIcon.js";
 
 let styles = theme => ({
   main: {
@@ -180,6 +180,15 @@ class Desktop extends Component {
             >
               Contactez-nous
             </Button>
+            <a
+              href="images/horaires_passage.pdf"
+              download
+              style={{ textDecoration: "none" }}
+            >
+              <Button variant="contained" className={classes.button}>
+                Horaires de passage
+              </Button>
+            </a>
           </Grid>
           <Grid item xs={12}>
             <h4 className={classes.paragraph}>

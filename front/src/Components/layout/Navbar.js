@@ -15,7 +15,7 @@ const styles = theme => ({
     marginBottom: 60
   },
   bar: {
-    backgroundColor: "#EEECEA"
+    backgroundColor: "#0b4553"
   },
   grow: {
     flexGrow: 1,
@@ -34,7 +34,7 @@ const styles = theme => ({
     padding: "1.1vw"
   },
   link: {
-    color: "black",
+    color: "white",
     [theme.breakpoints.up("md")]: {
       fontSize: "1.3vw"
     },
@@ -42,13 +42,13 @@ const styles = theme => ({
     position: "relative",
     "&::before": {
       content: "''",
-      color: "black",
+      color: "white",
       position: "absolute",
       width: "100%",
       height: "2px",
       bottom: 0,
       left: 0,
-      backgroundColor: "#000",
+      backgroundColor: "white",
       visibility: "hidden",
       transform: "scaleX(0)",
       transition: theme.transitions.create(["visibility", "transform"], {
@@ -95,19 +95,19 @@ class Navbar extends Component {
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
                   <Link to="/" className={classes.link}>
-                    Page 1
+                    Accueil
                   </Link>
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
                   <Link to="/page2" className={classes.link}>
-                    Page 2
+                    Tournée
                   </Link>
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
-                  <Link to="/page3" className={classes.link}>
-                    Page 3
+                  <Link to="/produits" className={classes.link}>
+                    Nos Produits
                   </Link>
                 </ListItem>
               </List>

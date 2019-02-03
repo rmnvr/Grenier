@@ -41,6 +41,9 @@ const styles = theme => ({
     },
     textDecoration: "none",
     position: "relative",
+    transition: theme.transitions.create(["color"], {
+      duration: theme.transitions.duration.complex
+    }),
     "&::before": {
       content: "''",
       color: "white",
@@ -49,12 +52,15 @@ const styles = theme => ({
       height: "2px",
       bottom: 0,
       left: 0,
-      backgroundColor: "white",
+      backgroundColor: "#e3c04c",
       visibility: "hidden",
       transform: "scaleX(0)",
       transition: theme.transitions.create(["visibility", "transform"], {
         duration: theme.transitions.duration.complex
       })
+    },
+    "&:hover": {
+      color: "#e3c04c"
     },
     "&:hover:before": {
       visibility: "visible",

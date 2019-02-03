@@ -22,7 +22,8 @@ const styles = theme => ({
     width: "90%",
     maxWidth: "900px",
     height: "auto",
-    marginTop: "0.67rem"
+    marginTop: "0.67rem",
+    boxShadow: "10px 10px 5px rgba(0, 0, 0, 0.4)"
   },
   button: {
     marginTop: theme.spacing.unit * 2,

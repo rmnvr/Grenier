@@ -1,15 +1,16 @@
 import React, { Component, Fragment } from "react";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
 
 import OffsetAnchor from "./utils/OffsetAnchor.js";
-import SimpleTable from "./layout/SimpleTable.js";
+// import SimpleTable from "./layout/SimpleTable.js";
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
   container: {
-    padding: theme.spacing.unit * 2
-    // backgroundImage: "url(images/linen/linen.png)"
+    padding: theme.spacing.unit * 2,
+    height: "80vh"
   },
   title: {
     textAlign: "center",
@@ -24,11 +25,14 @@ const styles = theme => ({
     marginTop: "0.67rem"
   },
   link: {
-    color: "black"
+    color: "black",
+
   },
   paragraph: {
-    textAlign: "center",
-    marginTop: "30px"
+    textAlign: "center"
+  },
+  paper: {
+    padding: "30px"
   }
 });
 
@@ -43,18 +47,37 @@ class Produits extends Component {
           <Grid item xs={12} className={classes.title}>
             <h1>Nos Produits</h1>
           </Grid>
-          <Grid item xs={10}>
-            <SimpleTable />
+          <Grid item xs={8}>
+            <Paper className={classes.paper}>
+              <Grid item xs={12} className={classes.paragraph}>
+                <p>
+                  Retrouvez ici prochainement la liste de nos principaux produits ainsi que leurs
+                  délais de commande.
+                </p>
+                <p>
+                  En attendant n'hésitez pas à contacter Benjamin directement si vous souhaitez avoir plus d'informations sur la disponibilité d'un produit particulier.
+                </p>
+                <p>
+                  Vous pouvez le joindre directement par téléphone au:{" "}
+                  <a href="tel:+33673654525" className={classes.link}>
+                    06.73.65.45.25
+                  </a>
+                </p>
+                <p>
+                  Ou bien par e-mail à l'adresse de contact:{" "}
+                  <a
+                    href="mailto:legrenierdebenjamin@gmail.com"
+                    className={classes.link}
+                  >
+                    legrenierdebenjamin@gmail.com
+                  </a>
+                </p>
+              </Grid>
+            </Paper>
           </Grid>
-          <Grid item xs={12} className={classes.paragraph}>
-            <p>
-              Pour commander, appelez directement Benjamin au :{" "}
-              <a href="tel:+33673654525" className={classes.link}>
-                06.73.65.45.25
-              </a>
-            </p>
-            <p>Les commandes envoyées par e-mail ne seront pas traitées</p>
-          </Grid>
+
+
+
         </Grid>
       </Fragment>
     );

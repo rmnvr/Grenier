@@ -12,20 +12,28 @@ class MyCarousel extends Component {
         showThumbs={false}
         infiniteLoop
         autoPlay
-        interval={3500}
+        interval={4000}
         transitionTime={1000}
       >
         <div>
-          <img src="images/bg3.jpg" alt="img 1" />
+          <img src="images/roll.jpg" alt="Champ" />
           <p className="legend">Legend 1</p>
         </div>
         <div>
-          <img src="images/bg3.jpg" alt="img 2" />
+          <img src="images/carrot.jpg" alt="Carottes" />
           <p className="legend">Legend 2</p>
         </div>
         <div>
-          <img src="images/bg3.jpg" alt="img 3" />
+          <img src="images/cock.jpg" alt="Poules" />
           <p className="legend">Legend 3</p>
+        </div>
+        <div>
+          <img src="images/cows.jpg" alt="Vaches" />
+          <p className="legend">Legend 4</p>
+        </div>
+        <div>
+          <img src="images/garlic.jpg" alt="Ail" />
+          <p className="legend">Legend 5</p>
         </div>
       </Carousel>
     );

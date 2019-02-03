@@ -10,7 +10,7 @@ import OffsetAnchor from "./utils/OffsetAnchor.js";
 const styles = theme => ({
   container: {
     padding: theme.spacing.unit * 2,
-    height: "80vh"
+    minHeight: "80vh"
   },
   title: {
     textAlign: "center",
@@ -47,7 +47,7 @@ class Produits extends Component {
           <Grid item xs={12} className={classes.title}>
             <h1>Nos Produits</h1>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item md={8} xs={12}>
             <Paper className={classes.paper}>
               <Grid item xs={12} className={classes.paragraph}>
                 <p>

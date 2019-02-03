@@ -17,8 +17,8 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2
   },
   logo: {
-    maxHeight: "300px",
-    width: "auto"
+    width: "100%",
+    height: "auto"
   },
   shadow: {
     boxShadow: "10px 10px 5px rgba(0, 0, 0, 0.4)"
@@ -36,7 +36,7 @@ const styles = theme => ({
   },
   bandeau: {
     padding: theme.spacing.unit * 4,
-    height: "200px",
+    minHeight: "200px",
     backgroundColor: "#e3c04c",
     fontFamily: "'Old Standard TT', serif",
     fontSize: "2rem",
@@ -53,14 +53,14 @@ class Accueil extends Component {
       <Fragment>
         <OffsetAnchor id="page1" />
         <Grid container className={classes.container} justify={"center"}>
-          <Grid container item xs={12} justify={"center"}>
+          <Grid item xs={12} md={6}>
             <img
               src={"images/logo-fd-blanc-bandeau.png"}
               className={classes.logo}
               alt="Logo Le Grenier de Benjamin"
             />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item md={8} xs={12}>
             <div className={classes.shadow}>
               <MyCarousel />
             </div>

@@ -16,23 +16,23 @@ class MyCarousel extends Component {
         transitionTime={1000}
       >
         <div>
-          <img src="images/roll.jpg" alt="Champ" />
+          <img src="images/roll.png" alt="Champ" />
           <p className="legend">Legend 1</p>
         </div>
         <div>
-          <img src="images/carrot.jpg" alt="Carottes" />
+          <img src="images/carrot.png" alt="Carottes" />
           <p className="legend">Legend 2</p>
         </div>
         <div>
-          <img src="images/cock.jpg" alt="Poules" />
+          <img src="images/cock.png" alt="Poules" />
           <p className="legend">Legend 3</p>
         </div>
         <div>
-          <img src="images/cows.jpg" alt="Vaches" />
+          <img src="images/cows.png" alt="Vaches" />
           <p className="legend">Legend 4</p>
         </div>
         <div>
-          <img src="images/garlic.jpg" alt="Ail" />
+          <img src="images/garlic.png" alt="Ail" />
           <p className="legend">Legend 5</p>
         </div>
       </Carousel>

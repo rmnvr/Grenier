@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 
 import OffsetAnchor from "./utils/OffsetAnchor.js";
+import MyMap from "./utils/MyMap.js";
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
@@ -46,20 +47,12 @@ class Tournee extends Component {
           <Grid item xs={12} className={classes.title}>
             <h1>Lieux et horaires de passage</h1>
             <Grid item xs={12}>
-              <img
-                src={"images/flyer.jpg"}
-                alt="flyer"
-                className={classes.flyer}
-              />
+              <MyMap />
             </Grid>
             <Grid item xs={12}>
-              <a
-                href="images/horaires_passage.pdf"
-                download
-                className={classes.link}
-              >
+              <a href="images/horaires_passage.pdf" className={classes.link}>
                 <Button className={classes.button}>
-                  Télécharger le document
+                  Afficher le programme complet
                 </Button>
               </a>
             </Grid>

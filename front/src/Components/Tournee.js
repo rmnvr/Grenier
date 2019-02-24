@@ -42,7 +42,7 @@ class Tournee extends Component {
 
     return (
       <Fragment>
-        <OffsetAnchor id="page2" />
+        <OffsetAnchor id="tournee-top" />
         <Grid container className={classes.container} justify={"center"}>
           <Grid item xs={12} className={classes.title}>
             <h1>Lieux et horaires de passage</h1>

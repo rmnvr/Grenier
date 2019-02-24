@@ -51,7 +51,7 @@ class Accueil extends Component {
 
     return (
       <Fragment>
-        <OffsetAnchor id="page1" />
+        <OffsetAnchor id="accueil-top" />
         <Grid container className={classes.container} justify={"center"}>
           <Grid item xs={12} md={6}>
             <img
@@ -73,7 +73,7 @@ class Accueil extends Component {
             </Grid>
             <Grid
               container
-              idem
+              item
               xs={12}
               className={classes.bandeau}
               justify={"center"}

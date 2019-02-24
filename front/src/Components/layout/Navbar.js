@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
-import { Link } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import { withStyles } from "@material-ui/core/styles";
+
+import MobileBar from "./MobileBar.js";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = theme => ({
   root: {
@@ -75,12 +79,31 @@ const styles = theme => ({
     [theme.breakpoints.up("md")]: {
       display: "flex"
     }
+  },
+  sectionMobile: {
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    }
   }
 });
 
 class Navbar extends Component {
+  state = {
+    open: false
+  };
+
+  handleDrawerOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleDrawerClose = () => {
+    this.setState({ open: false });
+  };
+
   render() {
     const { classes } = this.props;
+    const { open } = this.state;
 
     return (
       <div className={classes.root}>
@@ -88,39 +111,51 @@ class Navbar extends Component {
           <Toolbar>
             <div className={classes.grow}>
               <Button color="inherit">
-                <Link to="/">
+                <NavLink to="/">
                   <img
                     src="images/logo-bandeau.png"
                     alt="logo_grenier"
                     height="50px"
                   />
-                </Link>
+                </NavLink>
               </Button>
             </div>
 
             <div className={classes.sectionDesktop}>
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
-                  <Link to="/" className={classes.link}>
+                  <NavLink to="/#accueil-top" className={classes.link}>
                     Accueil
-                  </Link>
+                  </NavLink>
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
-                  <Link to="/tournee" className={classes.link}>
+                  <NavLink to="/tournee#tournee-top" className={classes.link}>
                     Tournée
-                  </Link>
+                  </NavLink>
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
-                  <Link to="/produits" className={classes.link}>
+                  <NavLink to="/produits#produits-top" className={classes.link}>
                     Nos Produits
-                  </Link>
+                  </NavLink>
                 </ListItem>
               </List>
             </div>
+            <div className={classes.sectionMobile}>
+              <IconButton
+                color="inherit"
+                aria-label="Menu"
+                className={classes.menuButton}
+                onClick={open ? this.handleDrawerClose : this.handleDrawerOpen}
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
           </Toolbar>
         </AppBar>
+
+        <MobileBar handleDrawerClose={this.handleDrawerClose} open={open} />
       </div>
     );
   }

@@ -25,8 +25,7 @@ const styles = theme => ({
     marginTop: "0.67rem"
   },
   link: {
-    color: "black",
-
+    color: "black"
   },
   paragraph: {
     textAlign: "center"
@@ -42,7 +41,7 @@ class Produits extends Component {
 
     return (
       <Fragment>
-        <OffsetAnchor id="page3" />
+        <OffsetAnchor id="produits-top" />
         <Grid container className={classes.container} justify={"center"}>
           <Grid item xs={12} className={classes.title}>
             <h1>Nos Produits</h1>
@@ -51,11 +50,13 @@ class Produits extends Component {
             <Paper className={classes.paper}>
               <Grid item xs={12} className={classes.paragraph}>
                 <p>
-                  Retrouvez ici prochainement la liste de nos principaux produits ainsi que leurs
-                  délais de commande.
+                  Retrouvez ici prochainement la liste de nos principaux
+                  produits ainsi que leurs délais de commande.
                 </p>
                 <p>
-                  En attendant n'hésitez pas à contacter Benjamin directement si vous souhaitez avoir plus d'informations sur la disponibilité d'un produit particulier.
+                  En attendant n'hésitez pas à contacter Benjamin directement si
+                  vous souhaitez avoir plus d'informations sur la disponibilité
+                  d'un produit particulier.
                 </p>
                 <p>
                   Vous pouvez le joindre directement par téléphone au:{" "}
@@ -75,9 +76,6 @@ class Produits extends Component {
               </Grid>
             </Paper>
           </Grid>
-
-
-
         </Grid>
       </Fragment>
     );

@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import { withStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
 
 import MobileBar from "./MobileBar.js";
 
+import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
+import Grid from "@material-ui/core/Grid";
 import ListItem from "@material-ui/core/ListItem";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -19,15 +21,27 @@ const styles = theme => ({
     marginBottom: 60
   },
   bar: {
-    backgroundColor: "#0b4553"
+    backgroundColor: "#0b4553", 
+    padding: "1%"
   },
-  grow: {
-    flexGrow: 1,
-    textAlign: "left"
+  image: {
+    width: "100%",
+    maxWidth: "500px",
+    minWidth: "300px",
+    height: "auto",
+    transition: theme.transitions.create(["width"], {
+      duration: theme.transitions.duration.complex
+    })
+  },
+  imageLittle: {
+    width: "50%",
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  logoBtn: {
+    padding:0
   },
   list: {
     display: "flex",
@@ -35,13 +49,19 @@ const styles = theme => ({
   },
   listItem: {
     width: "auto",
-    padding: "1.1vw"
+    padding: "2vw",
+    transition: theme.transitions.create(["padding"], {
+      duration: theme.transitions.duration.complex
+    })
+  },
+  listItemLittle: {
+    padding: "1vw"
   },
   link: {
     color: "white",
     fontWeight: "bold",
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.3vw"
+      fontSize: "1.5vw"
     },
     textDecoration: "none",
     position: "relative",
@@ -76,22 +96,27 @@ const styles = theme => ({
   },
   sectionDesktop: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       display: "flex"
     }
   },
   sectionMobile: {
     display: "flex",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       display: "none"
     }
   }
 });
 
+let lastScrollY = 0;
+let ticking = false;
+
 class Navbar extends Component {
   state = {
-    open: false
+    open: false,
+    size: false
   };
+  
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -101,57 +126,112 @@ class Navbar extends Component {
     this.setState({ open: false });
   };
 
+  handleScroll = () => {
+    lastScrollY = window.scrollY;
+
+    if (!ticking && window.screen.width >= 600) {
+      window.requestAnimationFrame(() => {
+        if(lastScrollY > 30 ) {
+          this.setState({size: true})
+        } else {
+          this.setState({size: false})
+        }
+        ticking = false;
+      });
+   
+      ticking = true;
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+
   render() {
     const { classes } = this.props;
-    const { open } = this.state;
+    const { open, size } = this.state;
 
     return (
       <div className={classes.root}>
         <AppBar className={classes.bar} position="fixed">
-          <Toolbar>
-            <div className={classes.grow}>
-              <Button color="inherit">
-                <NavLink to="/">
-                  <img
-                    src="images/logo-bandeau.png"
-                    alt="logo_grenier"
-                    height="50px"
-                  />
-                </NavLink>
-              </Button>
-            </div>
+          <Toolbar>  
+            <Grid container justify="space-between"> 
 
-            <div className={classes.sectionDesktop}>
-              <List className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <NavLink to="/#accueil-top" className={classes.link}>
-                    Accueil
-                  </NavLink>
-                </ListItem>
+              <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
+                <List className={classes.list}>
+                  
+                  <ListItem className={classNames(classes.listItem, {
+                        [classes.listItemLittle]: size
+                      })}>
+                    <NavLink to="/#accueil-top" className={classes.link}>
+                      Accueil
+                    </NavLink>
+                  </ListItem>
+                  
+                  <ListItem className={classNames(classes.listItem, {
+                        [classes.listItemLittle]: size
+                      })}>
+                    <NavLink to="/tournee#tournee-top" className={classes.link}>
+                      Tournée
+                    </NavLink>
+                  </ListItem>
+                
+                </List>
+              </Grid>
 
-                <ListItem className={classes.listItem}>
-                  <NavLink to="/tournee#tournee-top" className={classes.link}>
-                    Tournée
+              <Grid container justify="center" item xs={8} sm={5} md={6} className={classes.img}>
+                <Button className={classes.logoBtn} color="inherit">
+                  <NavLink to="/">
+                    <img
+                      src="images/logo-bandeau.png"
+                      alt="logo_grenier"
+                      className={classNames(classes.image, {
+                        [classes.imageLittle]: size
+                      })}
+                    />
                   </NavLink>
-                </ListItem>
+                </Button>
+              </Grid> 
 
-                <ListItem className={classes.listItem}>
-                  <NavLink to="/produits#produits-top" className={classes.link}>
-                    Nos Produits
-                  </NavLink>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                color="inherit"
-                aria-label="Menu"
-                className={classes.menuButton}
-                onClick={open ? this.handleDrawerClose : this.handleDrawerOpen}
-              >
-                <MenuIcon />
-              </IconButton>
-            </div>
+
+              <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
+                <List className={classes.list}>
+
+                  <ListItem className={classNames(classes.listItem, {
+                        [classes.listItemLittle]: size
+                      })}>
+                    <NavLink to="/produits#produits-top" className={classes.link}>
+                      Nos Produits
+                    </NavLink>
+                  </ListItem>
+
+                  <ListItem className={classNames(classes.listItem, {
+                        [classes.listItemLittle]: size
+                      })}>
+                    <NavLink to="/tournee#tournee-top" className={classes.link}>
+                      Tournée
+                    </NavLink>
+                  </ListItem>
+
+                </List>
+              </Grid>
+
+              <div className={classes.sectionMobile}>
+                <IconButton
+                  color="inherit"
+                  aria-label="Menu"
+                  className={classes.menuButton}
+                  onClick={open ? this.handleDrawerClose : this.handleDrawerOpen}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </div>
+            </Grid>
           </Toolbar>
         </AppBar>
 

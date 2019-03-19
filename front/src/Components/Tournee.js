@@ -9,7 +9,8 @@ import MyMap from "./utils/MyMap.js";
 
 const styles = theme => ({
   container: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing.unit * 2,
+    paddingTop: "15vh"
   },
   title: {
     textAlign: "center",

@@ -10,6 +10,7 @@ import OffsetAnchor from "./utils/OffsetAnchor.js";
 const styles = theme => ({
   container: {
     padding: theme.spacing.unit * 2,
+    paddingTop: "15vh",
     minHeight: "80vh"
   },
   title: {

@@ -14,7 +14,8 @@ import Presentation from "./Presentation.js";
 
 const styles = theme => ({
   container: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing.unit * 2,
+    paddingTop: "15vh"
   },
   logo: {
     width: "100%",
@@ -53,13 +54,6 @@ class Accueil extends Component {
       <Fragment>
         <OffsetAnchor id="accueil-top" />
         <Grid container className={classes.container} justify={"center"}>
-          <Grid item xs={12} md={6}>
-            <img
-              src={"images/logo-fd-blanc-bandeau.png"}
-              className={classes.logo}
-              alt="Logo Le Grenier de Benjamin"
-            />
-          </Grid>
           <Grid item md={8} xs={12}>
             <div className={classes.shadow}>
               <MyCarousel />

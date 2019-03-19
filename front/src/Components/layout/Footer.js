@@ -14,7 +14,6 @@ import InIcon from "../utils/InIcon.js";
 
 const styles = theme => ({
   root: {
-    width: "100vw",
     backgroundColor: "#0b4553",
     color: "white",
     paddingTop: "10px",

@@ -61,7 +61,7 @@ const styles = theme => ({
     color: "white",
     fontWeight: "bold",
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.5vw"
+      fontSize: "1.3vw"
     },
     textDecoration: "none",
     position: "relative",
@@ -206,15 +206,15 @@ class Navbar extends Component {
                         [classes.listItemLittle]: size
                       })}>
                     <NavLink to="/produits#produits-top" className={classes.link}>
-                      Nos Produits
+                      Produits
                     </NavLink>
                   </ListItem>
 
                   <ListItem className={classNames(classes.listItem, {
                         [classes.listItemLittle]: size
                       })}>
-                    <NavLink to="/tournee#tournee-top" className={classes.link}>
-                      Tournée
+                    <NavLink to="/commandes#commandes-top" className={classes.link}>
+                      Commandes
                     </NavLink>
                   </ListItem>
 

@@ -15,7 +15,7 @@ import Presentation from "./Presentation.js";
 const styles = theme => ({
   container: {
     padding: theme.spacing.unit * 2,
-    paddingTop: "15vh"
+    paddingTop: "17vh"
   },
   logo: {
     width: "100%",
@@ -65,18 +65,7 @@ class Accueil extends Component {
             <Grid item xs={12}>
               <Presentation />
             </Grid>
-            <Grid
-              container
-              item
-              xs={12}
-              className={classes.bandeau}
-              justify={"center"}
-            >
-              <p>
-                Retrouvez bientôt ici même, la carte intéractive de la tournée
-                de Benjamin ainsi que la liste des produits de son grenier !
-              </p>
-            </Grid>
+
           </Grid>
         </Fade>
       </Fragment>

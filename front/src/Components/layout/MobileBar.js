@@ -95,7 +95,14 @@ class MobileBar extends Component {
             className={classes.link}
             onClick={this.props.handleDrawerClose}
           >
-            <ListItem divider>Nos Produits</ListItem>
+            <ListItem divider>Produits</ListItem>
+          </NavLink>
+          <NavLink
+            to="/commandes#commandes-top"
+            className={classes.link}
+            onClick={this.props.handleDrawerClose}
+          >
+            <ListItem divider>Commandes</ListItem>
           </NavLink>
         </List>
       </Drawer>

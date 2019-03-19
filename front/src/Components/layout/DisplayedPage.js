@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Accueil from "../Accueil.js";
 import Tournee from "../Tournee.js";
 import Produits from "../Produits.js";
+import Commandes from "../Commandes.js";
 
 class DisplayedPage extends Component {
   render() {
@@ -12,6 +13,7 @@ class DisplayedPage extends Component {
         <Route path="/" exact component={Accueil} />
         <Route path="/tournee" component={Tournee} />
         <Route path="/produits" component={Produits} />
+        <Route path="/commandes" component={Commandes} />
       </Switch>
     );
   }

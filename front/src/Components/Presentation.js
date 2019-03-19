@@ -33,7 +33,8 @@ class Presentation extends Component {
           <Grid item xs={12} className={classes.title}>
             <h2>Mais qui est Benjamin ?</h2>
           </Grid>
-          <Grid item xs={9} className={classes.paragraph}>
+          <Grid item container justify={"space-evenly"} xs={10}>
+            <Grid item md={5} xs={12} className={classes.paragraph}>
             <p>
               A la croisée de l’Aude et l’Ariège, sur les collines lauragaises,
               entre la Piège et le Razès, vous apercevrez désormais, ou
@@ -60,6 +61,8 @@ class Presentation extends Component {
               facilement : qui d’avoir besoin de produits de première nécessité,
               qui de vouloir une petite tranche de fromage fermier, etc.
             </p>
+            </Grid>
+            <Grid item md={5} xs={12} className={classes.paragraph}>
             <p>
               De l’autre, Benjamin apporte ses produits de qualité, issus pour
               la plupart de notre terroir, en circuit court (productions locales
@@ -82,6 +85,7 @@ class Presentation extends Component {
               derrière de bons produits, sur les places de villages, alors
               endormis.
             </p>
+            </Grid>
           </Grid>
         </Grid>
       </Fragment>

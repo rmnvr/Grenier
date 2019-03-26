@@ -3,7 +3,8 @@ let markers = [
       title: "Saint Amans",
       lat: 43.227956,
       lng: 1.886098,
-      time: "Lundi 13h"
+      time: "Lundi 13h",
+      ico: "./images/ico-vert.png"
     },
     {
       title: "Mayreville",

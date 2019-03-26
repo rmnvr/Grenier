@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 
 import OffsetAnchor from "./utils/OffsetAnchor.js";
-import MyMap from "./utils/MyMap.js";
+
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
@@ -47,8 +47,10 @@ class Tournee extends Component {
         <Grid container className={classes.container} justify={"center"}>
           <Grid item xs={12} className={classes.title}>
             <h1>Lieux et horaires de passage</h1>
-            <Grid item xs={12}>
-              <MyMap />
+            <Grid item container justify="center" xs={12}>
+              <div style={{height: "80vh", width: "80%"}}>
+                <iframe title="map" src="https://www.google.com/maps/d/embed?mid=1jmGEnXIJfSDIGj7ajz6oTwTVLziGqBar" width="100%" height="100%"></iframe>
+              </div>            
             </Grid>
             <Grid item xs={12}>
               <a href="images/horaires_passage.pdf" className={classes.link}>

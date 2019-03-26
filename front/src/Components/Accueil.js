@@ -5,8 +5,8 @@ import Fade from "react-reveal/Fade";
 
 import OffsetAnchor from "./utils/OffsetAnchor.js";
 // import MyPaper from "./utils/MyPaper.js";
-import MediaCard from "./utils/MediaCard.js";
 import MyCarousel from "./layout/MyCarousel.js";
+import Triptyque from "./utils/Triptyque.js";
 
 import Presentation from "./Presentation.js";
 
@@ -51,35 +51,29 @@ class Accueil extends Component {
     super(props);
     this.state = {
       a: {
-        img: "images/bg3.jpg",
-        title: "Premier élément à mettre en avant",
-        list: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "Quisque magna arcu, tempor nec scelerisque in, dignissim lobortis nisl Vestibulum suscipit mi eget libero dignissim mollis. Donec finibus felis ac malesuada sodales.",
-          "Sed lacinia nulla quis lorem finibus ornare"
-        ],
+        img: "images/tri-tracteur.jpg",
+        title: "Un partenariat de confiance",
+        description: 
+          "Le Grenier de Benjamin soutient et valorise le travail des agriculteurs et éleveurs de la Région"
+        ,
         backgroundColor: "#0b4553",
         color: "#e3c04c"
       },
       b: {
-        img: "images/bg3.jpg",
-        title: "Là c'est pour le deuxième",
-        list: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "Quisque magna arcu, tempor nec scelerisque in, dignissim lobortis nisl",
-          "Sed lacinia nulla quis lorem finibus ornare. Vestibulum suscipit mi eget libero dignissim mollis. Donec finibus felis ac malesuada sodales."
-        ],
+        img: "images/tri-benich.jpg",
+        title: "Un service de proximité",
+        description: 
+          "Benjamin vous propose un service de proximité chaque semaine au coeur des villages et à domicile - sur simple demande"
+        ,
         backgroundColor: "#e3c04c",
         color: "#0b4553"
       },
       c: {
-        img: "images/bg3.jpg",
-        title: "Puis un troisième",
-        list: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit mi eget libero dignissim mollis. Donec finibus felis ac malesuada sodales.",
-          "Quisque magna arcu, tempor nec scelerisque in, dignissim lobortis nisl",
-          "Sed lacinia nulla quis lorem finibus ornare"
-        ],
+        img: "images/tri-choux.jpg",
+        title: "Des produits frais et locaux de qualité",
+        description: 
+          "Une sélection de produits frais et locaux, issus des circuits courts et qui respectent la saisonnalité des productions locales"
+        ,
         backgroundColor: "#0b4553",
         color: "#e3c04c"
       }
@@ -105,17 +99,7 @@ class Accueil extends Component {
               <Presentation />
             </Grid>
           </Grid>
-          <Grid container justify="center" style={{ marginTop: "20px", marginBottom:"20px" }}>
-              <Grid item xs={12} sm={6} md={4}>
-                <MediaCard content={this.state.a} />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <MediaCard content={this.state.b} />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <MediaCard content={this.state.c} />
-              </Grid>
-            </Grid>
+          <Triptyque content={this.state}/>
         </Fade>
       </Fragment>
     );

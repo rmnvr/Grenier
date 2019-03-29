@@ -40,7 +40,7 @@ class Tournee extends Component {
             <h1>Lieux et horaires de passage</h1>
             <Grid item container justify="center" xs={12}>
               <div style={{height: "80vh", width: "80%", border:"1px solid black"}}>
-                <iframe title="map" src="https://www.google.com/maps/d/embed?mid=1jmGEnXIJfSDIGj7ajz6oTwTVLziGqBar" width="100%" height="100%"></iframe>
+                {/*<iframe title="map" src="https://www.google.com/maps/d/embed?mid=1jmGEnXIJfSDIGj7ajz6oTwTVLziGqBar" width="100%" height="100%"></iframe>*/}
               </div>            
             </Grid>
             <Grid item xs={12} className={classes.table}>

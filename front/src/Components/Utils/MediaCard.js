@@ -11,7 +11,7 @@ const styles = theme => ({
     height: "100%"
   },
   media: {
-    minHeight: 170,
+    minHeight: 190,
     width: "auto",
     backgroundSize: "contain"
   },

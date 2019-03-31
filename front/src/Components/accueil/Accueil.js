@@ -3,10 +3,10 @@ import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
-import OffsetAnchor from "./utils/OffsetAnchor.js";
+import OffsetAnchor from "../utils/OffsetAnchor.js";
 // import MyPaper from "./utils/MyPaper.js";
-import MyCarousel from "./layout/MyCarousel.js";
-import Triptyque from "./utils/Triptyque.js";
+import MyCarousel from "./MyCarousel.js";
+import Triptyque from "../utils/Triptyque.js";
 
 import Presentation from "./Presentation.js";
 

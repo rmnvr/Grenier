@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
-import OffsetAnchor from "./utils/OffsetAnchor.js";
+import OffsetAnchor from "../utils/OffsetAnchor.js";
 // import SimpleTable from "./layout/SimpleTable.js";
 // import { Helmet } from "react-helmet";
 
@@ -36,23 +36,22 @@ const styles = theme => ({
   }
 });
 
-class Produits extends Component {
+class Commandes extends Component {
   render() {
     const { classes } = this.props;
 
     return (
       <Fragment>
-        <OffsetAnchor id="produits-top" />
+        <OffsetAnchor id="commandes-top" />
         <Grid container className={classes.container} justify={"center"}>
           <Grid item xs={12} className={classes.title}>
-            <h1>Nos Produits</h1>
+            <h1>Commandes</h1>
           </Grid>
           <Grid item md={8} xs={12}>
             <Paper className={classes.paper}>
               <Grid item xs={12} className={classes.paragraph}>
                 <p>
-                  Retrouvez ici prochainement la liste de nos principaux
-                  produits ainsi que leurs délais de commande.
+                  Passez ici prochainement votre commande pour un service toujours plus complet.
                 </p>
                 <p>
                   En attendant n'hésitez pas à contacter Benjamin directement si
@@ -83,4 +82,4 @@ class Produits extends Component {
   }
 }
 
-export default withStyles(styles)(Produits);
+export default withStyles(styles)(Commandes);

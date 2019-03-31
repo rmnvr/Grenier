@@ -7,8 +7,8 @@ import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
 
 import ProgressBar from "./ProgressBar.js";
-import FbIcon from "./Utils/FbIcon.js";
-import InIcon from "./Utils/InIcon.js";
+import FbIcon from "../src/components/Utils/FbIcon.js";
+import InIcon from "../src/components/Utils/InIcon.js";
 
 let styles = theme => ({
   main: {

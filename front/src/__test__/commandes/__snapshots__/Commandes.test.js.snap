@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the welcome page 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      id="commandes-top"
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": -70,
+        }
+      }
+    />
+  </div>,
+  <div
+    className="MuiGrid-container-8 MuiGrid-justify-xs-center-25 Commandes-container-1"
+  >
+    <div
+      className="MuiGrid-item-9 MuiGrid-grid-xs-12-48 Commandes-title-2"
+    >
+      <h1>
+        Commandes
+      </h1>
+    </div>
+    <div
+      className="MuiGrid-item-9 MuiGrid-grid-xs-12-48 MuiGrid-grid-md-8-72"
+    >
+      <div
+        className="MuiPaper-root-105 MuiPaper-elevation2-109 MuiPaper-rounded-106 Commandes-paper-7"
+      >
+        <div
+          className="MuiGrid-item-9 MuiGrid-grid-xs-12-48 Commandes-paragraph-6"
+        >
+          <p>
+            Passez ici prochainement votre commande pour un service toujours plus complet.
+          </p>
+          <p>
+            En attendant n'hésitez pas à contacter Benjamin directement si vous souhaitez avoir plus d'informations sur la disponibilité d'un produit particulier.
+          </p>
+          <p>
+            Vous pouvez le joindre directement par téléphone au:
+             
+            <a
+              className="Commandes-link-5"
+              href="tel:+33673654525"
+            >
+              06.73.65.45.25
+            </a>
+          </p>
+          <p>
+            Ou bien par e-mail à l'adresse de contact:
+             
+            <a
+              className="Commandes-link-5"
+              href="mailto:legrenierdebenjamin@gmail.com"
+            >
+              legrenierdebenjamin@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

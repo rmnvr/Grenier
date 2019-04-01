@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the welcome page 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "left": 0,
+        "position": "absolute",
+        "top": -70,
+      }
+    }
+  />
+</div>
+`;

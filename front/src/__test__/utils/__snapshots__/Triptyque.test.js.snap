@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the welcome page 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  style={
+    Object {
+      "marginBottom": "20px",
+      "marginTop": "20px",
+    }
+  }
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49 MuiGrid-grid-md-4-61"
+  >
+    <div
+      className="MuiPaper-root-103 MuiPaper-elevation1-106 MuiCard-root-102 MediaCard-card-98"
+      style={
+        Object {
+          "backgroundColor": "#0b4553",
+        }
+      }
+    >
+      <div
+        className="MuiCardMedia-root-130 MediaCard-media-99"
+        style={
+          Object {
+            "backgroundImage": "url(\\"images/tri-tracteur.jpg\\")",
+          }
+        }
+      />
+      <div
+        className="MuiCardContent-root-132"
+      >
+        <h2
+          className="MediaCard-title-100"
+          style={
+            Object {
+              "color": "#e3c04c",
+            }
+          }
+        >
+          Un partenariat de confiance
+        </h2>
+        <p
+          className="MediaCard-content-101"
+        >
+          Le Grenier de Benjamin soutient et valorise le travail des agriculteurs et éleveurs de la Région
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49 MuiGrid-grid-md-4-61"
+  >
+    <div
+      className="MuiPaper-root-103 MuiPaper-elevation1-106 MuiCard-root-102 MediaCard-card-98"
+      style={
+        Object {
+          "backgroundColor": "#e3c04c",
+        }
+      }
+    >
+      <div
+        className="MuiCardMedia-root-130 MediaCard-media-99"
+        style={
+          Object {
+            "backgroundImage": "url(\\"images/tri-benich.jpg\\")",
+          }
+        }
+      />
+      <div
+        className="MuiCardContent-root-132"
+      >
+        <h2
+          className="MediaCard-title-100"
+          style={
+            Object {
+              "color": "#0b4553",
+            }
+          }
+        >
+          Un service de proximité
+        </h2>
+        <p
+          className="MediaCard-content-101"
+        >
+          Benjamin vous propose un service de proximité chaque semaine au coeur des villages et à domicile - sur simple demande
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49 MuiGrid-grid-md-4-61"
+  >
+    <div
+      className="MuiPaper-root-103 MuiPaper-elevation1-106 MuiCard-root-102 MediaCard-card-98"
+      style={
+        Object {
+          "backgroundColor": "#0b4553",
+        }
+      }
+    >
+      <div
+        className="MuiCardMedia-root-130 MediaCard-media-99"
+        style={
+          Object {
+            "backgroundImage": "url(\\"images/tri-choux.jpg\\")",
+          }
+        }
+      />
+      <div
+        className="MuiCardContent-root-132"
+      >
+        <h2
+          className="MediaCard-title-100"
+          style={
+            Object {
+              "color": "#e3c04c",
+            }
+          }
+        >
+          Des produits frais et locaux de qualité
+        </h2>
+        <p
+          className="MediaCard-content-101"
+        >
+          Une sélection de produits frais et locaux, issus des circuits courts et qui respectent la saisonnalité des productions locales
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

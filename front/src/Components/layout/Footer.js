@@ -55,12 +55,7 @@ const styles = theme => ({
 });
 
 class Footer extends React.Component {
-  googleEvent = (event, category, label) => {
-    window.gtag("event", event, {
-      event_category: category,
-      event_label: label
-    });
-  };
+
   render() {
     const { classes } = this.props;
 
@@ -116,11 +111,6 @@ class Footer extends React.Component {
             href="https://www.facebook.com/Le-Grenier-de-Benjamin-216474645899457/"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={this.googleEvent(
-              "clickOnFacebook",
-              "clicks",
-              "Someone clicked on Facebook"
-            )}
           >
             <FbIcon />
           </Fab>
@@ -131,11 +121,6 @@ class Footer extends React.Component {
             href="https://www.linkedin.com/company/le-grenier-de-benjamin/ "
             target="_blank"
             rel="noopener noreferrer"
-            onClick={this.googleEvent(
-              "clickOnLinkedin",
-              "clicks",
-              "Someone clicked on Linkedin"
-            )}
           >
             <InIcon />
           </Fab>

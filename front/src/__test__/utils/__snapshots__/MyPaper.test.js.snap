@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Renders the welcome page 1`] = `
-<div
-  className="MuiPaper-root-2 MuiPaper-elevation1-5 MyPaper-paper-1"
-/>
-`;

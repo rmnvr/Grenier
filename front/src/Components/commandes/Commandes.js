@@ -4,7 +4,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
-// import SimpleTable from "./layout/SimpleTable.js";
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({

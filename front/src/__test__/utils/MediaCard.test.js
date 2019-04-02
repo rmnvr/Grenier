@@ -12,7 +12,7 @@ let content = {
   color: "#e3c04c"
 }
 
-it("Renders the welcome page", () => {
+it("Renders one media card", () => {
   const tree = renderer
     .create(<MediaCard content={content} />)
     .toJSON();

@@ -32,7 +32,7 @@ let content = {
   }
 };
 
-it("Renders the welcome page", () => {
+it("Renders the triptyque component", () => {
   const tree = renderer
     .create(<Triptyque content={content} />)
     .toJSON();

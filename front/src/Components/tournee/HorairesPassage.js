@@ -1,31 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/core/styles";
 
-const styles = {
-  table: {
-    width: "90%",
-    marginTop: "3%",
-    padding: 0,
-    borderCollapse: "collapse",
-  },
-  tableBody: {
-    
-  },
-  header: {
-    fontSize: "1.2rem", 
-    backgroundColor: "#0b4553",
-    color: "#e3c04c",
-    margin: 0,
-  },
-  test:{
-
-  }
-}
+import OneTable from "./OneTable.js"
 
 const HorairesPassage = (props) => {
-
-  const {classes} = props
   
   let week = {
     mardiArray : ["Mardi"],
@@ -53,36 +31,8 @@ const HorairesPassage = (props) => {
     }
   });
 
-  let table = (arrayDay) => {
-    let rows = arrayDay.map( (el, i) => {
-      return (
-        <tr key={i}>
-          <td>{el.title}</td>
-          <td>{el.time}</td>
-        </tr>
-      )
-    })
-
-    return (
-        <Grid item container justify="center" xs={12} sm={6} md={3}>
-          <table className={classes.table}>
-            <thead>
-              <tr>
-                <th colSpan="2" className={classes.header}>
-                  {arrayDay[0]}
-                </th>
-              </tr>
-            </thead>
-            <tbody className={classes.tableBody}>
-              {rows}
-            </tbody>
-          </table>
-        </Grid>
-    )
-  }
-
   let weekTable = (day) => {
-    return table(day)
+    return <OneTable day={day} />
   }
 
   return (
@@ -95,4 +45,4 @@ const HorairesPassage = (props) => {
   )
 }
 
-export default withStyles(styles)(HorairesPassage)
+export default HorairesPassage

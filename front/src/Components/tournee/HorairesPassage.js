@@ -31,16 +31,17 @@ const HorairesPassage = (props) => {
     }
   });
 
-  let weekTable = (day) => {
-    return <OneTable day={day} />
+  let weekTable = (oneWeek) => {
+    let oneWeekArray = Object.values(oneWeek)
+    let html = oneWeekArray.map( (day, i) => {
+      return <OneTable day={day} key={i} />
+    })
+    return html
   }
 
   return (
     <Grid container>
-      {weekTable(week.mardiArray)}
-      {weekTable(week.mercrediArray)}
-      {weekTable(week.jeudiArray)}
-      {weekTable(week.vendrediArray)}
+      {weekTable(week)}
     </Grid>
   )
 }

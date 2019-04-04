@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import classNames from "classnames";
@@ -111,30 +111,28 @@ const styles = theme => ({
 let lastScrollY = 0;
 let ticking = false;
 
-class Navbar extends Component {
-  state = {
-    open: false,
-    size: false
-  };
-  
+const Navbar = ( props ) => {
 
-  handleDrawerOpen = () => {
-    this.setState({ open: true });
+  const [ open, setOpen ] = useState( false )
+  const [ size, setSize ] = useState( false )
+
+  const handleDrawerOpen = () => {
+    setOpen( true );
   };
 
-  handleDrawerClose = () => {
-    this.setState({ open: false });
+  const  handleDrawerClose = () => {
+    setOpen( false );
   };
 
-  handleScroll = () => {
+  const handleScroll = () => {
     lastScrollY = window.scrollY;
 
     if (!ticking && window.screen.width >= 600) {
       window.requestAnimationFrame(() => {
         if(lastScrollY > 30 ) {
-          this.setState({size: true})
+          setSize( true )
         } else {
-          this.setState({size: false})
+          setSize( false )
         }
         ticking = false;
       });
@@ -143,102 +141,100 @@ class Navbar extends Component {
     }
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
+  useEffect( () => {
 
 
-  render() {
-    const { classes } = this.props;
-    const { open, size } = this.state;
+    window.addEventListener('scroll', handleScroll);
 
-    return (
-      <div className={classes.root}>
-        <AppBar className={classes.bar} position="fixed">
-          <Toolbar>  
-            <Grid container justify="space-between"> 
+    return function cleanup() {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  })
 
-              <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
-                <List className={classes.list}>
-                  
-                  <ListItem className={classNames(classes.listItem, {
-                        [classes.listItemLittle]: size
-                      })}>
-                    <NavLink to="/#accueil-top" className={classes.link}>
-                      Accueil
-                    </NavLink>
-                  </ListItem>
-                  
-                  <ListItem className={classNames(classes.listItem, {
-                        [classes.listItemLittle]: size
-                      })}>
-                    <NavLink to="/tournee#tournee-top" className={classes.link}>
-                      Tournée
-                    </NavLink>
-                  </ListItem>
+  const { classes } = props;
+
+  return (
+    <div className={classes.root}>
+      <AppBar className={classes.bar} position="fixed">
+        <Toolbar>  
+          <Grid container justify="space-between"> 
+
+            <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
+              <List className={classes.list}>
                 
-                </List>
-              </Grid>
-
-              <Grid container justify="center" item xs={8} sm={5} md={6} className={classes.img}>
-                <Button className={classes.logoBtn} color="inherit">
-                  <NavLink to="/">
-                    <img
-                      src="images/logo-bandeau.png"
-                      alt="logo_grenier"
-                      className={classNames(classes.image, {
-                        [classes.imageLittle]: size
-                      })}
-                    />
+                <ListItem className={classNames(classes.listItem, {
+                      [classes.listItemLittle]: size
+                    })}>
+                  <NavLink to="/#accueil-top" className={classes.link}>
+                    Accueil
                   </NavLink>
-                </Button>
-              </Grid> 
-
-
-              <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
-                <List className={classes.list}>
-
-                  <ListItem className={classNames(classes.listItem, {
-                        [classes.listItemLittle]: size
-                      })}>
-                    <NavLink to="/produits#produits-top" className={classes.link}>
-                      Produits
-                    </NavLink>
-                  </ListItem>
-
-                  <ListItem className={classNames(classes.listItem, {
-                        [classes.listItemLittle]: size
-                      })}>
-                    <NavLink to="/commandes#commandes-top" className={classes.link}>
-                      Commandes
-                    </NavLink>
-                  </ListItem>
-
-                </List>
-              </Grid>
-
-              <div className={classes.sectionMobile}>
-                <IconButton
-                  color="inherit"
-                  aria-label="Menu"
-                  className={classes.menuButton}
-                  onClick={open ? this.handleDrawerClose : this.handleDrawerOpen}
-                >
-                  <MenuIcon />
-                </IconButton>
-              </div>
+                </ListItem>
+                
+                <ListItem className={classNames(classes.listItem, {
+                      [classes.listItemLittle]: size
+                    })}>
+                  <NavLink to="/tournee#tournee-top" className={classes.link}>
+                    Tournée
+                  </NavLink>
+                </ListItem>
+              
+              </List>
             </Grid>
-          </Toolbar>
-        </AppBar>
 
-        <MobileBar handleDrawerClose={this.handleDrawerClose} open={open} />
-      </div>
-    );
-  }
+            <Grid container justify="center" item xs={8} sm={5} md={6} className={classes.img}>
+              <Button className={classes.logoBtn} color="inherit">
+                <NavLink to="/">
+                  <img
+                    src="images/logo-bandeau.png"
+                    alt="logo_grenier"
+                    className={classNames(classes.image, {
+                      [classes.imageLittle]: size
+                    })}
+                  />
+                </NavLink>
+              </Button>
+            </Grid> 
+
+
+            <Grid container justify="center" item sm={2} md={3} className={classes.sectionDesktop}>
+              <List className={classes.list}>
+
+                <ListItem className={classNames(classes.listItem, {
+                      [classes.listItemLittle]: size
+                    })}>
+                  <NavLink to="/produits#produits-top" className={classes.link}>
+                    Produits
+                  </NavLink>
+                </ListItem>
+
+                <ListItem className={classNames(classes.listItem, {
+                      [classes.listItemLittle]: size
+                    })}>
+                  <NavLink to="/commandes#commandes-top" className={classes.link}>
+                    Commandes
+                  </NavLink>
+                </ListItem>
+
+              </List>
+            </Grid>
+
+            <div className={classes.sectionMobile}>
+              <IconButton
+                color="inherit"
+                aria-label="Menu"
+                className={classes.menuButton}
+                onClick={ open ? handleDrawerClose : handleDrawerOpen }
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </Grid>
+        </Toolbar>
+      </AppBar>
+
+      <MobileBar handleDrawerClose={ handleDrawerClose } open={ open } />
+    </div>
+  );
 }
 
 export default withStyles(styles)(Navbar);

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { withStyles } from "@material-ui/core/styles";
@@ -56,58 +56,57 @@ const styles = theme => ({
   }
 });
 
-class MobileBar extends Component {
-  render() {
-    const { classes } = this.props;
+const MobileBar = ( props ) => {
 
-    return (
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={this.props.open}
-        classes={{
-          paper: classes.drawerPaper
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={this.props.handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-        <List>
-          <NavLink
-            to="/#accueil-top"
-            className={classes.link}
-            onClick={this.props.handleDrawerClose}
-          >
-            <ListItem divider>Accueil</ListItem>
-          </NavLink>
-          <NavLink
-            to="/tournee#tournee-top"
-            className={classes.link}
-            onClick={this.props.handleDrawerClose}
-          >
-            <ListItem divider>Tournée</ListItem>
-          </NavLink>
-          <NavLink
-            to="/produits#produits-top"
-            className={classes.link}
-            onClick={this.props.handleDrawerClose}
-          >
-            <ListItem divider>Produits</ListItem>
-          </NavLink>
-          <NavLink
-            to="/commandes#commandes-top"
-            className={classes.link}
-            onClick={this.props.handleDrawerClose}
-          >
-            <ListItem divider>Commandes</ListItem>
-          </NavLink>
-        </List>
-      </Drawer>
-    );
-  }
+  const { classes } = props;
+
+  return (
+    <Drawer
+      className={classes.drawer}
+      variant="persistent"
+      anchor="left"
+      open={props.open}
+      classes={{
+        paper: classes.drawerPaper
+      }}
+    >
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={props.handleDrawerClose}>
+          <ChevronLeftIcon />
+        </IconButton>
+      </div>
+      <List>
+        <NavLink
+          to="/#accueil-top"
+          className={classes.link}
+          onClick={props.handleDrawerClose}
+        >
+          <ListItem divider>Accueil</ListItem>
+        </NavLink>
+        <NavLink
+          to="/tournee#tournee-top"
+          className={classes.link}
+          onClick={props.handleDrawerClose}
+        >
+          <ListItem divider>Tournée</ListItem>
+        </NavLink>
+        <NavLink
+          to="/produits#produits-top"
+          className={classes.link}
+          onClick={props.handleDrawerClose}
+        >
+          <ListItem divider>Produits</ListItem>
+        </NavLink>
+        <NavLink
+          to="/commandes#commandes-top"
+          className={classes.link}
+          onClick={props.handleDrawerClose}
+        >
+          <ListItem divider>Commandes</ListItem>
+        </NavLink>
+      </List>
+    </Drawer>
+  );
 }
 
 export default withStyles(styles)(MobileBar);

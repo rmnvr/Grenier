@@ -26,7 +26,7 @@ const styles = theme => ({
   }
 });
 
-function MediaCard(props) {
+const MediaCard = (props) => {
   const { classes } = props;
   let backColor = props.content.backgroundColor;
   let color = props.content.color;

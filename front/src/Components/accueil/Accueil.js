@@ -1,14 +1,16 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
+
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
-import OffsetAnchor from "../utils/OffsetAnchor.js";
-// import MyPaper from "./utils/MyPaper.js";
 import MyCarousel from "./MyCarousel.js";
-import Triptyque from "../utils/Triptyque.js";
-
 import Presentation from "./Presentation.js";
+
+import OffsetAnchor from "../utils/OffsetAnchor.js";
+import Triptyque from "../utils/Triptyque.js";
+import ParallaxDivider from "../utils/ParallaxDivider.js";
+import articlesData from "../utils/articlesData.js"
 
 // import { Helmet } from "react-helmet";
 
@@ -46,64 +48,32 @@ const styles = theme => ({
   }
 });
 
-class Accueil extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      a: {
-        img: "images/tri-tracteur.jpg",
-        title: "Un partenariat de confiance",
-        description: 
-          "Le Grenier de Benjamin soutient et valorise le travail des agriculteurs et éleveurs de la Région"
-        ,
-        backgroundColor: "#0b4553",
-        color: "#e3c04c"
-      },
-      b: {
-        img: "images/tri-benich.jpg",
-        title: "Un service de proximité",
-        description: 
-          "Benjamin vous propose un service de proximité chaque semaine au coeur des villages et à domicile - sur simple demande"
-        ,
-        backgroundColor: "#e3c04c",
-        color: "#0b4553"
-      },
-      c: {
-        img: "images/tri-choux.jpg",
-        title: "Des produits frais et locaux de qualité",
-        description: 
-          "Une sélection de produits frais et locaux, issus des circuits courts et qui respectent la saisonnalité des productions locales"
-        ,
-        backgroundColor: "#0b4553",
-        color: "#e3c04c"
-      }
-    };
-  }
+const Accueil = (props) =>  {
 
-  render() {
-    const { classes } = this.props;
+  const { classes } = props;
 
-    return (
-      <Fragment>
-        <OffsetAnchor id="accueil-top" />
-        <Grid container className={classes.container} justify={"center"}>
-          <Grid item md={8} xs={12}>
-            <div className={classes.shadow}>
-              <MyCarousel />
-            </div>
+  return (
+    <>
+      <OffsetAnchor id="accueil-top" />
+      <Grid container className={classes.container} justify={"center"}>
+        <Grid item md={8} xs={12}>
+          <div className={classes.shadow}>
+            <MyCarousel />
+          </div>
+        </Grid>
+      </Grid>
+      <Fade bottom cascade distance={"50px"} duration={500}>
+        <Grid container justify={"center"} style={{ marginTop: "100px" }}>
+          <Grid item xs={12}>
+            <Presentation />
           </Grid>
         </Grid>
-        <Fade bottom cascade distance={"50px"} duration={500}>
-          <Grid container justify={"center"} style={{ marginTop: "100px" }}>
-            <Grid item xs={12}>
-              <Presentation />
-            </Grid>
-          </Grid>
-          <Triptyque content={this.state}/>
-        </Fade>
-      </Fragment>
-    );
-  }
+        <ParallaxDivider />
+        <Triptyque content={articlesData}/>
+        <ParallaxDivider />
+      </Fade>
+    </>
+  );
 }
 
 export default withStyles(styles)(Accueil);

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 let styles = {
@@ -8,20 +8,18 @@ let styles = {
   }
 };
 
-class InIcon extends Component {
-  render() {
-    const { classes } = this.props;
+const InIcon = (props) => {
+  const { classes } = props;
 
-    return (
-      <Fragment>
-        <img
-          src="images/linkedin.png"
-          alt="facebook-logo"
-          className={classes.image}
-        />
-      </Fragment>
-    );
-  }
+  return (
+    <>
+      <img
+        src="images/linkedin.png"
+        alt="facebook-logo"
+        className={classes.image}
+      />
+    </>
+  );
 }
 
 export default withStyles(styles)(InIcon);

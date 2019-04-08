@@ -8,12 +8,11 @@ const styles = theme => ({
   card: {
     flexGrow: 1,
     boxShadow: "none",
-    height: "100%"
+    height: "100%",
+    borderRadius: "10px"
   },
   media: {
-    minHeight: 190,
-    width: "auto",
-    backgroundSize: "contain"
+    minHeight: "200px",
   },
   title: {
     textAlign: "center",

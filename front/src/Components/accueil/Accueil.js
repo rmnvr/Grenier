@@ -9,7 +9,6 @@ import Presentation from "./Presentation.js";
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
 import Triptyque from "../utils/Triptyque.js";
-import ParallaxDivider from "../utils/ParallaxDivider.js";
 import articlesData from "../utils/articlesData.js"
 
 // import { Helmet } from "react-helmet";
@@ -62,16 +61,12 @@ const Accueil = (props) =>  {
           </div>
         </Grid>
       </Grid>
-      <Fade bottom cascade distance={"50px"} duration={500}>
-        <Grid container justify={"center"} style={{ marginTop: "100px" }}>
-          <Grid item xs={12}>
-            <Presentation />
-          </Grid>
+      <Grid container justify={"center"} style={{ marginTop: "100px" }}>
+        <Grid item xs={12}>
+          <Presentation />
         </Grid>
-        <ParallaxDivider />
-        <Triptyque content={articlesData}/>
-        <ParallaxDivider />
-      </Fade>
+      </Grid>
+      <Triptyque content={articlesData}/>
     </>
   );
 }

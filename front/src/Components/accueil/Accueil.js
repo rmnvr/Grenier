@@ -2,7 +2,6 @@ import React from "react";
 
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
-import Fade from "react-reveal/Fade";
 
 import MyCarousel from "./MyCarousel.js";
 import Presentation from "./Presentation.js";

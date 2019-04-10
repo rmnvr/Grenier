@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { NavHashLink as Link } from "react-router-hash-link";
 
 import { withStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
@@ -134,22 +134,29 @@ const Footer = ( props ) => {
       >
         <List>
           <ListItem className={classes.listItem}>
-            <Link to="/" className={classes.link}>
+            <Link to="/#accueil-top" className={classes.link}>
               Accueil
             </Link>
           </ListItem>
 
           <ListItem className={classes.listItem}>
-            <Link to="/tournee" className={classes.link}>
+            <Link to="/tournee#tournee-top" className={classes.link}>
               Tournée
             </Link>
           </ListItem>
 
           <ListItem className={classes.listItem}>
-            <Link to="/produits" className={classes.link}>
-              Nos Produits
+            <Link to="/produits#produits-top" className={classes.link}>
+              Produits
             </Link>
           </ListItem>
+
+          <ListItem className={classes.listItem}>
+            <Link to="/commandes#commandes-top" className={classes.link}>
+              Commandes
+            </Link>
+          </ListItem>
+
         </List>
       </Grid>
     </Grid>

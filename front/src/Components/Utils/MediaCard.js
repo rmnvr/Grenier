@@ -9,7 +9,8 @@ const styles = theme => ({
     flexGrow: 1,
     boxShadow: "none",
     height: "100%",
-    borderRadius: "10px"
+    borderRadius: "10px", 
+    marginTop: "5%"
   },
   media: {
     minHeight: "200px",

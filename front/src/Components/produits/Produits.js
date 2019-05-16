@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
+import products from "../utils/productsData"
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
@@ -38,6 +39,9 @@ const styles = theme => ({
 const Produits = ( props ) => {
 
   const { classes } = props;
+  useEffect(() => {
+    console.log(products)
+  })
 
   return (
     <>

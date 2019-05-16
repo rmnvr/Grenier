@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
+import TableGenerator from "../utils/TableGenerator"
 import OffsetAnchor from "../utils/OffsetAnchor.js";
 import products from "../utils/productsData"
+import { ClickAwayListener } from "@material-ui/core";
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
@@ -39,9 +41,6 @@ const styles = theme => ({
 const Produits = ( props ) => {
 
   const { classes } = props;
-  useEffect(() => {
-    console.log(products)
-  })
 
   return (
     <>
@@ -49,6 +48,18 @@ const Produits = ( props ) => {
       <Grid container className={classes.container} justify={"center"}>
         <Grid item xs={12} className={classes.title}>
           <h1>Nos Produits</h1>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <h3>Charcuterie</h3>
+          <TableGenerator data={ products[0].charcuterie } />
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <h3>Fromage</h3>
+          <TableGenerator data={ products[0].fromage }/>
+        </Grid>
+        <Grid item md={8} xs={12}>
+          <h3>Fruits et légumes</h3>
+          <TableGenerator data={ products[0].fruitsEtLegumes } />
         </Grid>
         <Grid item md={8} xs={12}>
           <Paper className={classes.paper}>

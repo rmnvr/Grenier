@@ -41,6 +41,7 @@ const Tournee = (props) => {
         <Grid item xs={12} className={classes.title}>
         
           <h1>Lieux et horaires de passage</h1>
+          <p>(Attention, veuillez noter que ces informations sont données à titre indicatif et qu'elles peuvent être amenées à évoluer)</p>
           <Grid item container justify="center" xs={12}>
             <div style={{height: "80vh", width: "80%", border:"1px solid black"}}>
               <iframe 

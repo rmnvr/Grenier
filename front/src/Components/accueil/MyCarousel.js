@@ -16,16 +16,17 @@ const MyCarousel = () => {
       transitionTime={1000}
     >
       <div>
-        <img src="images/car_insideTruck.jpg" alt="Champ" />
-        <p className="legend">Legend 1</p>
+        <img src="images/car_insideTruck.jpg" alt="Interieur du camion" />
+        {/*<p className="legend">Legend 1</p>*/}
       </div>
       <div>
-        <img src="images/car_countrySide.jpg" alt="Carottes" />
-        <p className="legend">Legend 2</p>
+        <img src="images/car_countrySide.jpg" alt="Camion sur route de campagne" />
       </div>
       <div>
-        <img src="images/car_cheese.jpg" alt="Poules" />
-        <p className="legend">Legend 3</p>
+        <img src="images/car_products.jpg" alt="Etal de produits" />
+      </div>
+      <div>
+        <img src="images/car_bread.jpg" alt="Pain" />
       </div>
     </Carousel>
   );

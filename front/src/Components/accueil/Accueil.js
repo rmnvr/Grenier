@@ -54,7 +54,7 @@ const Accueil = (props) =>  {
     <>
       <OffsetAnchor id="accueil-top" />
       <Grid container className={classes.container} justify={"center"}>
-        <Grid item md={8} xs={12}>
+        <Grid item md={7} xs={12}>
           <div className={classes.shadow}>
             <MyCarousel />
           </div>

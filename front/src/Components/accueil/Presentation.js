@@ -31,9 +31,9 @@ const Presentation = (props) => {
     <>
       <Grid container className={classes.container} justify={"center"}>
         <Grid item xs={12} className={classes.title}>
-          <h2>Mais qui est Benjamin ?</h2>
+          <h2>A propos du Grenier de Benjamin</h2>
         </Grid>
-        <Grid item container justify={"space-evenly"} xs={10}>
+        <Grid item container justify={"space-around"} xs={10}>
           <Grid item md={5} xs={12} className={classes.paragraph}>
           <p>
             A la croisée de l’Aude et l’Ariège, sur les collines lauragaises,

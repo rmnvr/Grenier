@@ -16,11 +16,16 @@ const styles = theme => ({
   table: {
     minWidth: 300,
   },
+  tableTitle:{
+    textAlign: "center",
+    backgroundColor: "#0b4553",
+    color: "#e3c04c",
+    fontFamily: "'Old Standard TT', serif",
+    fontSize: "1.2rem"
+  }
 });
 
 const TableGenerator = ( props ) => {
-
-  console.log(props)
 
   const { classes } = props;
 
@@ -31,19 +36,16 @@ const TableGenerator = ( props ) => {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell></TableCell>
-            <TableCell align="right">Unité</TableCell>
-            <TableCell align="right">Prix</TableCell>
+            <TableCell className={classes.tableTitle} colSpan={2}>{props.name}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {products.map((product, i) => (
             <TableRow key={i}>
               <TableCell component="th" scope="row">
-                {product.name}
+                {product.main}
               </TableCell>
-              <TableCell align="right">{product.type}</TableCell>
-              <TableCell align="right">{product.price}€</TableCell>
+              <TableCell align="right">{product.accessory}</TableCell>
             </TableRow>
           ))}
         </TableBody>

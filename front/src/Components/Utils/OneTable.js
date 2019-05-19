@@ -19,13 +19,13 @@ let styles = {
 }
 
 function OneTable(props) {
-  const { day, classes } = props;
+  const { title, data, classes } = props;
 
-  let rows = day.map( (el, i) => {
+  let rows = data.map( (el, i) => {
     return (
       <tr key={i}>
-        <td>{el.title}</td>
-        <td>{el.time}</td>
+        <td>{el.main}</td>
+        <td>{el.accessory}</td>
       </tr>
     )
   })
@@ -36,7 +36,7 @@ function OneTable(props) {
         <thead>
           <tr>
             <th colSpan="2" className={classes.header}>
-              {day[0]}
+              {title}
             </th>
           </tr>
         </thead>

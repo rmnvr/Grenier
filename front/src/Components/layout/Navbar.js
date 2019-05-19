@@ -60,7 +60,7 @@ const styles = theme => ({
   link: {
     color: "white",
     fontWeight: "bold",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       fontSize: "1.3vw"
     },
     textDecoration: "none",

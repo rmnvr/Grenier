@@ -23,10 +23,7 @@ const styles = theme => ({
     }
   },
   image: {
-    width: "70%",
-    [theme.breakpoints.down("sm")]: {
-      width: "50%"
-    }
+    width: "70%"
   },
   listItem: {
     padding: "0.5vw"
@@ -47,7 +44,7 @@ const styles = theme => ({
   },
   link: {
     color: "white",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "1.3vw"
     },
     textDecoration: "none"
@@ -66,7 +63,8 @@ const Footer = ( props ) => {
         justify="center"
         alignItems="center"
         xs={12}
-        sm={3}
+        sm={6}
+        md={3}
         className={classes.section}
       >
         <img
@@ -82,7 +80,8 @@ const Footer = ( props ) => {
         justify="flex-start"
         alignItems="center"
         xs={12}
-        sm={3}
+        sm={6}
+        md={3}
         className={classes.section}
       >
         <h4>Contact</h4>
@@ -101,7 +100,8 @@ const Footer = ( props ) => {
         container
         justify="center"
         xs={12}
-        sm={3}
+        sm={6}
+        md={3}
         className={classes.section}
       >
         <Fab
@@ -129,7 +129,8 @@ const Footer = ( props ) => {
         container
         justify="center"
         xs={12}
-        sm={3}
+        sm={6}
+        md={3}
         className={classes.section}
       >
         <List>

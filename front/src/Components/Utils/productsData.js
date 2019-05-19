@@ -1,348 +1,280 @@
 let products = [
   { charcuterie : [
       {
-        name: "Chorizo Fort",
-        type: "Kg",
-        price: 15.90
+        main: "Chorizo Fort",
+        accessory: "15.90 / Kg"
       },
       {
-        name: "Chorizo Doux",
-        type: "Kg",
-        price: 15.90
+        main: "Chorizo Doux",
+        accessory: "15.90 / Kg"
       },
       {
-        name: "Pâté Aveyronnais",
-        type: "Kg",
-        price: 12.80
+        main: "Pâté Aveyronnais",
+        accessory: "12.80 / Kg"
       },
       {
-        name: "Rillettes d'oie",
-        type: "Kg",
-        price: 22.70
+        main: "Rillettes d'oie",
+        accessory: "22.70 / Kg"
       },
       {
-        name: "Poitrine séchée des Pyrénées",
-        type: "Kg",
-        price: 18.90
+        main: "Poitrine séchée des Pyrénées",
+        accessory: "18.90 / Kg"
       },
       {
-        name: "Ventrèche roulée des Pyrénées",
-        type: "Kg",
-        price: 16.20
+        main: "Ventrèche roulée des Pyrénées",
+        accessory: "16.20 / Kg"
       },
       {
-        name: "Poitrine Fumée",
-        type: "Kg",
-        price: 14.10
+        main: "Poitrine Fumée",
+        accessory: "14.10 / Kg"
       },
       {
-        name: "Saucisson à l'ail",
-        type: "Kg",
-        price: 6.30
+        main: "Saucisson à l'ail",
+        accessory: "6.30 / Kg"
       },
       {
-        name: "Boudin aux oignons",
-        type: "Kg",
-        price: 11.70
+        main: "Boudin aux oignons",
+        accessory: "11.70 / Kg"
       },
       {
-        name: "Boudin à la viande",
-        type: "Kg",
-        price: 11.70
+        main: "Boudin à la viande",
+        accessory: "11.70 / Kg"
       },
       {
-        name: "Jambon cuit",
-        type: "Kg",
-        price: 13.10
+        main: "Jambon cuit",
+        accessory: "13.10 / Kg"
       },
       {
-        name: "Jambon cru du Périgord",
-        type: "Kg",
-        price: 16.20
+        main: "Jambon cru du Périgord",
+        accessory: "16.20 / Kg"
       },
       {
-        name: "Saucisse de foie",
-        type: "Kg",
-        price: 16.90
+        main: "Saucisse de foie",
+        accessory: "16.90 / Kg"
       },
       {
-        name: "Saucisse perche d'Ariège",
-        type: "Kg",
-        price: 25.00
+        main: "Saucisse perche d'Ariège",
+        accessory: "25.00 / Kg"
       },
       {
-        name: "Pâté de tête",
-        type: "Kg",
-        price: 7.40
+        main: "Pâté de tête",
+        accessory: "7.40 / Kg"
       },
       {
-        name: "Roti de porc cuit",
-        type: "Kg",
-        price: 14.40
+        main: "Roti de porc cuit",
+        accessory: "14.40 / Kg"
       },
       {
-        name: "Pommes dauphines",
-        type: "Kg",
-        price: 21.60
+        main: "Pommes dauphines",
+        accessory: "21.60 / Kg"
       }
     ],
     fromage: [
       {
-        name: "Pascouli",
-        type: "Kg",
-        price: 23.60
+        main: "Pascouli",
+        accessory: "23.60 / Kg"
       },
       {
-        name: "Pascouli aux herbes",
-        type: "Kg",
-        price: 23.60
+        main: "Pascouli aux herbes",
+        accessory: "23.60 / Kg"
       },
       {
-        name: "Tomme de Pascouli",
-        type: "Kg",
-        price: 23.60
+        main: "Tomme de Pascouli",
+        accessory: "23.60 / Kg"
       },
       {
-        name: "Mont de Lacaune (3 laits)",
-        type: "Kg",
-        price: 23.20
+        main: "Mont de Lacaune (3 laits)",
+        accessory: "23.20 / Kg"
       },
       {
-        name: "Compté (4 mois d'affinage)",
-        type: "Kg",
-        price: 21.60
+        main: "Compté (4 mois d'affinage)",
+        accessory: "21.60 / Kg"
       },
       {
-        name: "Betmal vache/chèvre",
-        type: "Kg",
-        price: 26.90
+        main: "Betmal vache/chèvre",
+        accessory: "26.90 / Kg"
       },
       {
-        name: "Cantal jeune",
-        type: "Kg",
-        price: 13.75
+        main: "Cantal jeune",
+        accessory: "13.75 / Kg"
       },
       {
-        name: "Saint-Nectaire",
-        type: "Kg",
-        price: 22.90
+        main: "Saint-Nectaire",
+        accessory: "22.90 / Kg"
       },
       {
-        name: "Bleu de Briola",
-        type: "Kg",
-        price: 28.10
+        main: "Bleu de Briola",
+        accessory: "28.10 / Kg"
       },
       {
-        name: "Saint Julien",
-        type: "Kg",
-        price: 23.60
+        main: "Saint Julien",
+        accessory: "23.60 / Kg"
       },
       {
-        name: "Fresquel",
-        type: "Kg",
-        price: 23.60
+        main: "Fresquel",
+        accessory: "23.60 / Kg"
       },
       {
-        name: "L'Ariegeois",
-        type: "Kg",
-        price: 13.95
+        main: "L'Ariegeois",
+        accessory: "13.95 / Kg"
       },
       {
-        name: "Montsalvy",
-        type: "Kg",
-        price: 10.90
+        main: "Montsalvy",
+        accessory: "10.90 / Kg"
       },
       {
-        name: "Mixte vache brebis",
-        type: "Kg",
-        price: 26.60
+        main: "Mixte vache brebis",
+        accessory: "26.60 / Kg"
       },
       {
-        name: "Pur brebis",
-        type: "Kg",
-        price: 23.90
+        main: "Pur brebis",
+        accessory: "23.90 / Kg"
       },
       {
-        name: "Pur chèvre",
-        type: "Kg",
-        price: 25.60
+        main: "Pur chèvre",
+        accessory: "25.60 / Kg"
       },
       {
-        name: "Pérail de brebis",
-        type: "Pièce",
-        price: 3.90
+        main: "Pérail de brebis",
+        accessory: "3.90 / Pièce"
       },
       {
-        name: "L'Ecir d'Aubrac",
-        type: "Pièce",
-        price: 4.50
+        main: "L'Ecir d'Aubrac",
+        accessory: "4.50 / Pièce"
       },
       {
-        name: "La Bouyguette",
-        type: "Pièce",
-        price: 5.50
+        main: "La Bouyguette",
+        accessory: "5.50 / Pièce"
       },
       {
-        name: "Le XV du Pic",
-        type: "Pièce",
-        price: 3.90
+        main: "Le XV du Pic",
+        accessory: "3.90 / Pièce"
       },
       {
-        name: "Crotin du Pic",
-        type: "Pièce",
-        price: 3.90
+        main: "Crotin du Pic",
+        accessory: "3.90 / Pièce"
       },
       {
-        name: "Roquefort",
-        type: "Kg",
-        price: 21.90
+        main: "Roquefort",
+        accessory: "21.90 / Pièce"
       },
     ],
     fruitsEtLegumes:[
       {
-        name: "Salade",
-        type: "Pièce",
-        price: 1.20
+        main: "Salade",
+        accessory: "1.20 / Pièce"
       },
       {
-        name: "Mâche",
-        type: "Kg",
-        price: 8.10
+        main: "Mâche",
+        accessory: "8.10 / Kg"
       },
       {
-        name: "Carottes",
-        type: "Kg",
-        price: 2.90
+        main: "Carottes",
+        accessory: "2.90 / Kg"
       },
       {
-        name: "Chou-fleur",
-        type: "Kg",
-        price: 2.70
+        main: "Chou-fleur",
+        accessory: "2.70 / Kg"
       },
       {
-        name: "Chou vert frisé",
-        type: "Pièce",
-        price: 2.70
+        main: "Chou vert frisé",
+        accessory: "2.70 / Pièce"
       },
       {
-        name: "Chou vert lisse",
-        type: "Pièce",
-        price: 2.70
+        main: "Chou vert lisse",
+        accessory: "2.70 / Pièce"
       },
       {
-        name: "Oignons jaunes",
-        type: "Kg",
-        price: 1.80
+        main: "Oignons jaunes",
+        accessory: "1.80 Kg"
       },
       {
-        name: "Navets",
-        type: "Kg",
-        price: 2.70
+        main: "Navets",
+        accessory: "2.70 Kg"
       },
       {
-        name: "Botte de navets nouveaux",
-        type: "Pièce",
-        price: 2.00
+        main: "Botte de navets nouveaux",
+        accessory: "2.00 / Pièce"
       },
       {
-        name: "Pommes de terre (Mona Lisa)",
-        type: "Kg",
-        price: 1.80
+        main: "Pommes de terre (Mona Lisa)",
+        accessory: "1.80 / Kg"
       },
       {
-        name: "Poireaux",
-        type: "Kg",
-        price: 2.90
+        main: "Poireaux",
+        accessory: "2.90 / Kg"
       },
       {
-        name: "Blettes",
-        type: "Kg",
-        price: 2.70
+        main: "Blettes",
+        accessory: "2.70 / Kg"
       },
       {
-        name: "Ail",
-        type: "Kg",
-        price: 7.90
+        main: "Ail",
+        accessory: "7.90 / Kg"
       },
       {
-        name: "Lentilles vertes bio",
-        type: "Kg",
-        price: 5.40
+        main: "Lentilles vertes bio",
+        accessory: "5.40 / Kg"
       },
       {
-        name: "Haricots secs",
-        type: "Kg",
-        price: 6.30
+        main: "Haricots secs",
+        accessory: "6.30 / Kg"
       },
       {
-        name: "Pois-chiches bio",
-        type: "Kg",
-        price: 4.15
+        main: "Pois-chiches bio",
+        accessory: "4.15 / Kg"
       },
       {
-        name: "Epinards",
-        type: "Kg",
-        price: 4.50
+        main: "Epinards",
+        accessory: "4.50 / Kg"
       },
       {
-        name: "Radis botte",
-        type: "Piece",
-        price: 1.70
+        main: "Radis botte",
+        accessory: "1.70 / Pièce"
       },
       {
-        name: "Concombres",
-        type: "Pièce",
-        price: 1.70
+        main: "Concombres",
+        accessory: "1.70 / Pièce"
       },
       {
-        name: "Endives",
-        type: "Kg",
-        price: 3.25
+        main: "Endives",
+        accessory: "3.25 / Kg"
       },
       {
-        name: "Pommes Gala",
-        type: "Kg",
-        price: 2.70
+        main: "Pommes Gala",
+        accessory: "2.70 / Kg"
       },
       {
-        name: "Kiwis",
-        type: "Kg",
-        price: 3.60
+        main: "Kiwis",
+        accessory: "3.60 Kg"
       },
       {
-        name: "Poires Conférence",
-        type: "Kg",
-        price: 2.90
+        main: "Poires Conférence",
+        accessory: "2.90 / Kg"
       },
       {
-        name: "Pommes Golden",
-        type: "Kg",
-        price: 2.70
+        main: "Pommes Golden",
+        accessory: "2.70 / Kg"
       },
       {
-        name: "Bananes",
-        type: "Kg",
-        price: 1.95
+        main: "Bananes",
+        accessory: "1.95 / Kg"
       },
       {
-        name: "Oranges",
-        type: "Kg",
-        price: 2.15
+        main: "Oranges",
+        accessory: "2.15 / Kg"
       },
       {
-        name: "Asperges",
-        type: "Kg",
-        price: 8.90
+        main: "Asperges",
+        accessory: "8.90 / Kg"
       },
       {
-        name: "Artichauts Bouquets",
-        type: "Pièce",
-        price: 3.50
+        main: "Artichauts Bouquets",
+        accessory: "3.50 / Pièce"
       },
       {
-        name: "Cebettes bottes",
-        type: "Pièce",
-        price: 2.00
+        main: "Cebettes bottes",
+        accessory: "2.00 / Pièce"
       }
     ]
   }

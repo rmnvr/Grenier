@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-const MyCarousel = () => {
+function MyCarousel () {
 
   return (
     <Carousel
@@ -16,7 +16,10 @@ const MyCarousel = () => {
       transitionTime={1000}
     >
       <div>
-        <img src="images/car_insideTruck.jpg" alt="Interieur du camion" />
+        <img 
+          src="images/car_insideTruck.jpg" 
+          alt="Interieur du camion"
+        />
         {/*<p className="legend">Legend 1</p>*/}
       </div>
       <div>

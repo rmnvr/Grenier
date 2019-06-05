@@ -29,20 +29,6 @@ const styles = theme => ({
   },
   item: {
     paddingTop: theme.spacing.unit * 8
-  },
-  image: {
-    maxHeight: "130px",
-    maxWidth: "100%",
-    marginTop: "0.67rem"
-  },
-  bandeau: {
-    padding: theme.spacing.unit * 4,
-    minHeight: "200px",
-    backgroundColor: "#e3c04c",
-    fontFamily: "'Old Standard TT', serif",
-    fontSize: "2rem",
-    color: "#0b4553",
-    textAlign: "justify"
   }
 });
 

@@ -144,137 +144,137 @@ let products = [
       },
       {
         main: "La Bouyguette",
-        accessory: "5.50 / Pièce"
+        accessory: "5.50 € / Pièce"
       },
       {
         main: "Le XV du Pic",
-        accessory: "3.90 / Pièce"
+        accessory: "3.90 € / Pièce"
       },
       {
         main: "Crotin du Pic",
-        accessory: "3.90 / Pièce"
+        accessory: "3.90 € / Pièce"
       },
       {
         main: "Roquefort",
-        accessory: "21.90 / Pièce"
+        accessory: "21.90 € / Pièce"
       },
     ],
     fruitsEtLegumes:[
       {
         main: "Salade",
-        accessory: "1.20 / Pièce"
+        accessory: "1.20 € / Pièce"
       },
       {
         main: "Mâche",
-        accessory: "8.10 / Kg"
+        accessory: "8.10 € / Kg"
       },
       {
         main: "Carottes",
-        accessory: "2.90 / Kg"
+        accessory: "2.90 € / Kg"
       },
       {
         main: "Chou-fleur",
-        accessory: "2.70 / Kg"
+        accessory: "2.70 € / Kg"
       },
       {
         main: "Chou vert frisé",
-        accessory: "2.70 / Pièce"
+        accessory: "2.70 € / Pièce"
       },
       {
         main: "Chou vert lisse",
-        accessory: "2.70 / Pièce"
+        accessory: "2.70 € / Pièce"
       },
       {
         main: "Oignons jaunes",
-        accessory: "1.80 Kg"
+        accessory: "1.80 € / Kg"
       },
       {
         main: "Navets",
-        accessory: "2.70 Kg"
+        accessory: "2.70 € / Kg"
       },
       {
         main: "Botte de navets nouveaux",
-        accessory: "2.00 / Pièce"
+        accessory: "2.00 € / Pièce"
       },
       {
         main: "Pommes de terre (Mona Lisa)",
-        accessory: "1.80 / Kg"
+        accessory: "1.80 € / Kg"
       },
       {
         main: "Poireaux",
-        accessory: "2.90 / Kg"
+        accessory: "2.90 € / Kg"
       },
       {
         main: "Blettes",
-        accessory: "2.70 / Kg"
+        accessory: "2.70 € / Kg"
       },
       {
         main: "Ail",
-        accessory: "7.90 / Kg"
+        accessory: "7.90 € / Kg"
       },
       {
         main: "Lentilles vertes bio",
-        accessory: "5.40 / Kg"
+        accessory: "5.40 € / Kg"
       },
       {
         main: "Haricots secs",
-        accessory: "6.30 / Kg"
+        accessory: "6.30 € / Kg"
       },
       {
         main: "Pois-chiches bio",
-        accessory: "4.15 / Kg"
+        accessory: "4.15 € / Kg"
       },
       {
         main: "Epinards",
-        accessory: "4.50 / Kg"
+        accessory: "4.50 € / Kg"
       },
       {
         main: "Radis botte",
-        accessory: "1.70 / Pièce"
+        accessory: "1.70 € / Pièce"
       },
       {
         main: "Concombres",
-        accessory: "1.70 / Pièce"
+        accessory: "1.70 € / Pièce"
       },
       {
         main: "Endives",
-        accessory: "3.25 / Kg"
+        accessory: "3.25 € / Kg"
       },
       {
         main: "Pommes Gala",
-        accessory: "2.70 / Kg"
+        accessory: "2.70 € / Kg"
       },
       {
         main: "Kiwis",
-        accessory: "3.60 Kg"
+        accessory: "3.60 € / Kg"
       },
       {
         main: "Poires Conférence",
-        accessory: "2.90 / Kg"
+        accessory: "2.90 € / Kg"
       },
       {
         main: "Pommes Golden",
-        accessory: "2.70 / Kg"
+        accessory: "2.70 € / Kg"
       },
       {
         main: "Bananes",
-        accessory: "1.95 / Kg"
+        accessory: "1.95 € / Kg"
       },
       {
         main: "Oranges",
-        accessory: "2.15 / Kg"
+        accessory: "2.15 €/ Kg"
       },
       {
         main: "Asperges",
-        accessory: "8.90 / Kg"
+        accessory: "8.90 € / Kg"
       },
       {
         main: "Artichauts Bouquets",
-        accessory: "3.50 / Pièce"
+        accessory: "3.50 € / Pièce"
       },
       {
         main: "Cebettes bottes",
-        accessory: "2.00 / Pièce"
+        accessory: "2.00 € / Pièce"
       }
     ]
   }

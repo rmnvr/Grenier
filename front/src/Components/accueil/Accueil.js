@@ -5,6 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 import MyCarousel from "./MyCarousel.js";
 import Presentation from "./Presentation.js";
+import TestButton from "./TestButton"
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
 import Triptyque from "../utils/Triptyque.js";
@@ -52,6 +53,7 @@ const Accueil = (props) =>  {
         </Grid>
       </Grid>
       <Triptyque content={articlesData}/>
+      <TestButton />
     </>
   );
 }

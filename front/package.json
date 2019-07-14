@@ -17,8 +17,7 @@
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.8.6",
     "serve": "^10.1.2",
-    "typeface-roboto": "0.0.54",
-    "webpack-dev-server": "^3.7.1"
+    "typeface-roboto": "0.0.54"
   },
   "scripts": {
     "start": "react-scripts start",

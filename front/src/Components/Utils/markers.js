@@ -21,7 +21,7 @@ let markers = [
       accessory: "11h"
     },
     {
-      main: "Cazalneroux",
+      main: "Cazalrenoux",
       lat: 43.198434,
       lng: 1.949708,
       day: "Mardi",

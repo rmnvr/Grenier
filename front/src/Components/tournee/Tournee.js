@@ -49,13 +49,25 @@ const Tournee = (props) => {
             indicatif et qu'elles peuvent être amenées à évoluer)
           </p>
         </Grid>
-        <Grid
+        <Grid item container justify="center" xs={12}>
+          <div
+            style={{ height: "80vh", width: "80%", border: "1px solid black" }}
+          >
+            <iframe
+              title="map"
+              src="https://www.google.com/maps/d/embed?mid=1jmGEnXIJfSDIGj7ajz6oTwTVLziGqBar"
+              width="100%"
+              height="100%"
+            ></iframe>
+          </div>
+        </Grid>
+        {/* <Grid
           item
           xs={12}
           className={classes.mapContainer}
         >
           <MyMap />
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} className={classes.table}>
           <HorairesPassage markers={markers} />
         </Grid>

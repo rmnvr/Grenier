@@ -62,7 +62,7 @@ export class MyMap extends Component {
           position={{ lat: lat, lng: lng }}
           day={item.day}
           time={item.accessory}
-          icon={item.icon}
+          // icon={item.icon}
         />
       );
     });

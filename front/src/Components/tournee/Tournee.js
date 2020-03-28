@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
 import HorairesPassage from "./HorairesPassage.js";
+import MyMap from "../utils/MyMap.js";
 
 import markers from "../utils/markers.js"
 
@@ -18,6 +19,10 @@ const styles = theme => ({
     textAlign: "center",
     fontFamily: "'Old Standard TT', serif",
     color: "#0b4553"
+  },
+  mapContainer: {
+    width: "80vw",
+    height: "80vh",
   },
   table: {
     marginTop: theme.spacing.unit * 12,
@@ -37,29 +42,23 @@ const Tournee = (props) => {
       <OffsetAnchor id="tournee-top" />
 
       <Grid container className={classes.container} justify={"center"}>
-
         <Grid item xs={12} className={classes.title}>
-        
           <h1>Lieux et horaires de passage</h1>
-          <p>(Attention, veuillez noter que ces informations sont données à titre indicatif et qu'elles peuvent être amenées à évoluer)</p>
-          <Grid item container justify="center" xs={12}>
-            <div style={{height: "80vh", width: "80%", border:"1px solid black"}}>
-              <iframe 
-                title="map" 
-                src="https://www.google.com/maps/d/embed?mid=1jmGEnXIJfSDIGj7ajz6oTwTVLziGqBar" 
-                width="100%" 
-                height="100%"
-              >
-              </iframe>
-            </div>            
-          </Grid>
-
-          <Grid item xs={12} className={classes.table}>
-            <HorairesPassage markers={markers}/>
-          </Grid>
-
+          <p>
+            (Attention, veuillez noter que ces informations sont données à titre
+            indicatif et qu'elles peuvent être amenées à évoluer)
+          </p>
         </Grid>
-
+        <Grid
+          item
+          xs={12}
+          className={classes.mapContainer}
+        >
+          <MyMap />
+        </Grid>
+        <Grid item xs={12} className={classes.table}>
+          <HorairesPassage markers={markers} />
+        </Grid>
       </Grid>
     </>
   );

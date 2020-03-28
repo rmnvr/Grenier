@@ -30,6 +30,20 @@ const styles = theme => ({
   },
   item: {
     paddingTop: theme.spacing.unit * 8
+  },
+  temporaryBanner: {
+    backgroundColor: "#e3c04c"
+  },
+  temporaryBannerText: {
+    textAlign: "justify",
+    fontFamily: "'Old Standard TT', serif",
+    fontWeight: "bold",
+    color: "#0b4553",
+    lineHeight: 1.7
+  },
+  hr: {
+    marginTop: "10px",
+    borderTop: "2px solid #0b4553"
   }
 });
 
@@ -41,19 +55,29 @@ const Accueil = (props) =>  {
     <>
       <OffsetAnchor id="accueil-top" />
       <Grid container className={classes.container} justify={"center"}>
-        <Grid item md={7} xs={12}>
+        <Grid item md={6} xs={12}>
           <div className={classes.shadow}>
             <MyCarousel />
           </div>
         </Grid>
       </Grid>
-      <Grid container justify={"center"} style={{ marginTop: "100px" }}>
+      <Grid container justify={"center"}>
+        <Grid container item xs={12} className={classes.temporaryBanner} justify={"center"}>
+          <Grid item xs={9} className={classes.temporaryBannerText}>
+            <h2 style={{ textAlign: "center" }}>INFORMATIONS IMPORTANTES COVID-19 !</h2>
+            <h2>Les tournées sont maintenues dans les lieux de passages habituels.<br />
+              Elles seront modifiées et élargies à d'autres villages à partir du mardi 31 mars.<br />
+              Pour toutes commandes n'hésitez pas à contacter Benjamin directement par SMS au 06 73 65 45 25 en précisant votre nom et le lieu de passage.<br />
+              Si vous souhaitez que Benjamin passe chez vous ou chez un proche n'hésitez pas à le contacter par SMS également.<br />
+              Prenez soin de vous, NE SORTEZ PAS POUR RIEN !</h2>
+          </Grid>
+        </Grid>
         <Grid item xs={12}>
           <Presentation />
         </Grid>
       </Grid>
       <Triptyque content={articlesData}/>
-      <TestButton />
+      {/* <TestButton /> */}
     </>
   );
 }

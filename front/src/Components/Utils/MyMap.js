@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-import Grid from "@material-ui/core/Grid";
 
 import myMarkers from "./markers.js"
 
@@ -38,23 +37,32 @@ export class MyMap extends Component {
   render() {
     console.log("google",this.props.google)
 
-    const style = {
-      width: "85vw",
-      height: "75vh"
+    const mapStyle = {
+      width: "80%",
+      height: "100%",
+      border: "1px solid black",
+      margin: "auto"
+    };
+
+    const containerStyle = {
+      width: "98vw",
+      height: "80vh",
+      margin: "auto"
     };
 
     let markers = myMarkers.map((item, i) => {
       let lat = item.lat;
       let lng = item.lng;
-
+      console.log("MARKER", item)
       return (
         <Marker
           onClick={this.onMarkerClick}
           key={i}
-          title={item.title}
+          title={item.main}
           position={{ lat: lat, lng: lng }}
-          time={item.time}
-          icon={item.ico}
+          day={item.day}
+          time={item.accessory}
+          icon={item.icon}
         />
       );
     });
@@ -64,30 +72,28 @@ export class MyMap extends Component {
     }
 
     return (
-      <Grid container justify="center">
-        <Grid item>
-          <div style={style}>
-            <Map
-              google={this.props.google}
-              style={style}
-              initialCenter={{ lat: 43.215988, lng: 1.84313 }}
-              zoom={11}
-              onClick={this.onMapClicked}
-            >
-              {markers}
-              <InfoWindow
-                marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}
-              >
-                <div>
-                  <h4>{this.state.selectedPlace.title}</h4>
-                  <p>{this.state.selectedPlace.time}</p>
-                </div>
-              </InfoWindow>
-            </Map>
+      <Map
+        google={this.props.google}
+        containerStyle={containerStyle}
+        style={mapStyle}
+        initialCenter={{ lat: 43.215988, lng: 1.84313 }}
+        zoom={11}
+        onClick={this.onMapClicked}
+      >
+        {markers}
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+        >
+          <div>
+            <h4>{this.state.selectedPlace.title}</h4>
+            <p>
+              {this.state.selectedPlace.day + " "}
+              {this.state.selectedPlace.time}
+            </p>
           </div>
-        </Grid>
-      </Grid>
+        </InfoWindow>
+      </Map>
     );
   }
 }

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withStyles } from "@material-ui/core/styles";
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
@@ -18,7 +17,9 @@ const styles = theme => ({
 })
 
 const PopoverContent = ( props ) => {
-
+useEffect( () => {
+  console.log("PROPS", props)
+}, [])
   const { classes, text, day, time } = props;
 
   return(
@@ -29,8 +30,12 @@ const PopoverContent = ( props ) => {
 
       <Grid className={classes.bottom} container direction="row" justify="space-evenly">
         <Grid item>{day}</Grid>
-        <Grid item> - </Grid>
-        <Grid item>{time}</Grid>
+        {
+          time != " - " && (<>
+          <Grid item> - </Grid>
+          <Grid item>{time}</Grid>
+          </>)
+        }
       </Grid>
     </Grid>
   )

@@ -1,103 +1,56 @@
-import React, { Component } from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import React, { useState } from 'react';
+import GoogleMapReact from 'google-map-react';
 
-import myMarkers from "./markers.js"
+import myMarkers from "./markers.js";
+import Marker from "./Marker.js"
 
-export class MyMap extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: {}
-    };
-  }
-  
+const MyMap = ( props ) => {
 
-  onMarkerClick = (props, marker) => {
-    console.log("marker", marker)
+  const [ activeMarker, setActiveMarker ] = useState()
 
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-  }
-
-  onMapClicked = () => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
-  };
-
-
-  render() {
-    console.log("google",this.props.google)
-
-    const mapStyle = {
-      width: "80%",
-      height: "100%",
-      border: "1px solid black",
-      margin: "auto"
-    };
-
-    const containerStyle = {
-      width: "98vw",
-      height: "80vh",
-      margin: "auto"
-    };
-
-    let markers = myMarkers.map((item, i) => {
-      let lat = item.lat;
-      let lng = item.lng;
-      console.log("MARKER", item)
-      return (
-        <Marker
-          onClick={this.onMarkerClick}
-          key={i}
-          title={item.main}
-          position={{ lat: lat, lng: lng }}
-          day={item.day}
-          time={item.accessory}
-          // icon={item.icon}
-        />
-      );
-    });
-
-    if (!this.props.loaded) {
-      return <div>Loading...</div>;
-    }
+  let markers = myMarkers.map((item, i) => {
 
     return (
-      <Map
-        google={this.props.google}
-        containerStyle={containerStyle}
-        style={mapStyle}
-        initialCenter={{ lat: 43.215988, lng: 1.84313 }}
-        zoom={11}
-        onClick={this.onMapClicked}
+      <Marker 
+        lat={item.lat} 
+        lng={item.lng} 
+        text={item.main} 
+        day={item.day}
+        time={item.accessory}
+        icon={item.icon}
+        activeMarker={activeMarker} 
+        key={i} 
+      />
+      // <Marker
+      //   onClick={this.onMarkerClick}
+      //   key={i}
+      //   title={item.main}
+      //   position={{ lat: lat, lng: lng }}
+
+      // />
+    );
+  });
+
+  return (
+    // Important! Always set the container height explicitly
+    <div style={{ height: "70vh", width: "70%" }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
+        defaultCenter={props.center}
+        defaultZoom={props.zoom}
       >
         {markers}
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.title}</h4>
-            <p>
-              {this.state.selectedPlace.day + " "}
-              {this.state.selectedPlace.time}
-            </p>
-          </div>
-        </InfoWindow>
-      </Map>
-    );
-  }
+      </GoogleMapReact>
+    </div>
+  );
 }
 
-export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_API_KEY
-})(MyMap);
+MyMap.defaultProps = {
+  center: {
+    lat: 43.21,
+    lng: 1.84313
+  },
+  zoom: 11
+}
+
+export default MyMap;

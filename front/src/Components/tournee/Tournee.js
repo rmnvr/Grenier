@@ -21,8 +21,9 @@ const styles = theme => ({
     color: "#0b4553"
   },
   mapContainer: {
-    width: "80vw",
-    height: "80vh",
+    width: "70vw",
+    height: "70vh",
+    margin: "auto"
   },
   table: {
     marginTop: theme.spacing.unit * 12,
@@ -49,7 +50,7 @@ const Tournee = (props) => {
             indicatif et qu'elles peuvent être amenées à évoluer)
           </p>
         </Grid>
-        <Grid item container justify="center" xs={12}>
+        {/* <Grid item container justify="center" xs={12}>
           <div
             style={{ height: "80vh", width: "80%", border: "1px solid black" }}
           >
@@ -60,14 +61,16 @@ const Tournee = (props) => {
               height="100%"
             ></iframe>
           </div>
-        </Grid>
-        {/* <Grid
+        </Grid> */}
+        <Grid
+          container
           item
           xs={12}
           className={classes.mapContainer}
+          justify={"center"}
         >
           <MyMap />
-        </Grid> */}
+        </Grid>
         <Grid item xs={12} className={classes.table}>
           <HorairesPassage markers={markers} />
         </Grid>

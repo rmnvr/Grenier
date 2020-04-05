@@ -40,15 +40,24 @@ const Produits = ( props ) => {
       <Grid container className={classes.container} justify={"space-around"}>
         <Grid item xs={12} className={classes.title}>
           <h1>Nos Produits</h1>
+          <p>
+            (Cette liste est donnée à titre indicatif, la gamme évolue chaque semaine)
+          </p>
         </Grid>
         <Grid item lg={3} md={7} xs={12}>
-          <TableGenerator data={ sort(products[0].charcuterie) } name="Charcuterie" />
+          <TableGenerator
+            data={sort(products[0].charcuterie)}
+            name="Charcuterie"
+          />
         </Grid>
         <Grid item lg={3} md={7} xs={12}>
-          <TableGenerator data={ sort(products[0].fromage) } name="Fromage" />
+          <TableGenerator data={sort(products[0].fromage)} name="Fromage" />
         </Grid>
         <Grid item lg={3} md={7} xs={12}>
-          <TableGenerator data={ sort(products[0].fruitsEtLegumes) } name="Fruits et Légumes" />
+          <TableGenerator
+            data={sort(products[0].fruitsEtLegumes)}
+            name="Fruits et Légumes"
+          />
         </Grid>
       </Grid>
     </>

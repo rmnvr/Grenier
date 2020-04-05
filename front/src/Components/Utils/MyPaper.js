@@ -16,21 +16,20 @@ const styles = theme => ({
   }
 });
 
-class MyPaper extends Component {
-  render() {
-    const { classes } = this.props;
+const MyPaper = ( props ) => {
+
+    const { classes } = props;
 
     return (
       <Paper
         className={classes.paper}
-        id={this.props.id}
+        id={ props.id }
         elevation={1}
         square={true}
       >
-        {this.props.children}
+        { props.children }
       </Paper>
     );
-  }
 }
 
 export default withStyles(styles)(MyPaper);

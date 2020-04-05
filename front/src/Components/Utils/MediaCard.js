@@ -3,19 +3,17 @@ import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 
 const styles = theme => ({
   card: {
     flexGrow: 1,
     boxShadow: "none",
-    height: "100%"
+    height: "100%",
+    borderRadius: "10px", 
+    marginTop: "5%"
   },
   media: {
-    minHeight: 170,
-    width: "auto",
-    backgroundSize: "contain"
+    minHeight: "200px",
   },
   title: {
     textAlign: "center",
@@ -28,7 +26,7 @@ const styles = theme => ({
   }
 });
 
-function MediaCard(props) {
+const MediaCard = (props) => {
   const { classes } = props;
   let backColor = props.content.backgroundColor;
   let color = props.content.color;
@@ -44,17 +42,9 @@ function MediaCard(props) {
         <h2 className={classes.title} style={{ color: color }}>
           {props.content.title}
         </h2>
-        <List>
-          <ListItem disableGutters className={classes.content}>
-            {props.content.list[0]}
-          </ListItem>
-          <ListItem disableGutters className={classes.content}>
-            {props.content.list[1]}
-          </ListItem>
-          <ListItem disableGutters className={classes.content}>
-            {props.content.list[2]}
-          </ListItem>
-        </List>
+        <p className={classes.content}>
+          {props.content.description}
+        </p>
       </CardContent>
     </Card>
   );

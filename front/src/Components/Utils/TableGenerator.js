@@ -45,7 +45,7 @@ const TableGenerator = ( props ) => {
               <TableCell component="th" scope="row">
                 {product.main}
               </TableCell>
-              <TableCell align="right">{product.accessory}</TableCell>
+              {/* <TableCell align="right">{product.accessory}</TableCell> */}
             </TableRow>
           ))}
         </TableBody>

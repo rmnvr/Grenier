@@ -2,10 +2,10 @@ import React from "react";
 
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 import MyCarousel from "./MyCarousel.js";
 import Presentation from "./Presentation.js";
-import TestButton from "./TestButton"
 
 import OffsetAnchor from "../utils/OffsetAnchor.js";
 import Triptyque from "../utils/Triptyque.js";
@@ -62,21 +62,40 @@ const Accueil = (props) =>  {
         </Grid>
       </Grid>
       <Grid container justify={"center"}>
-        <Grid container item xs={12} className={classes.temporaryBanner} justify={"center"}>
+        <Grid
+          container
+          item
+          xs={12}
+          className={classes.temporaryBanner}
+          justify={"center"}
+        >
           <Grid item xs={9} className={classes.temporaryBannerText}>
-            <h2 style={{ textAlign: "center" }}>INFORMATIONS IMPORTANTES COVID-19 !</h2>
-            <h2>Les tournées sont maintenues dans les lieux de passages habituels.<br />
-              Elles seront modifiées et élargies à d'autres villages à partir du mardi 31 mars.<br />
-              Pour toutes commandes n'hésitez pas à contacter Benjamin directement par SMS au 06 73 65 45 25 en précisant votre nom et le lieu de passage.<br />
-              Si vous souhaitez que Benjamin passe chez vous ou chez un proche n'hésitez pas à le contacter par SMS également.<br />
-              Prenez soin de vous, NE SORTEZ PAS POUR RIEN !</h2>
+            <h2 style={{ textAlign: "center" }}>
+              INFORMATIONS IMPORTANTES COVID-19&nbsp;!
+            </h2>
+            <h2>
+              Les tournées ont été modifiées et élargies à d'autres villages
+              depuis le mardi 31 mars. <br />(
+              <NavLink to="/tournee#tournee-top" style={{ color: "#0b4553" }}>
+                Consulter les nouveaux horaires
+              </NavLink>
+              )<br />
+              Pour toutes commandes n'hésitez pas à contacter Benjamin
+              directement par SMS au 06 73 65 45 25 en précisant votre nom et le
+              lieu de passage.
+              <br />
+              Si vous souhaitez que Benjamin passe chez vous ou chez un proche
+              n'hésitez pas à le contacter par SMS également.
+              <br />
+              Prenez soin de vous, NE SORTEZ PAS POUR RIEN !
+            </h2>
           </Grid>
         </Grid>
         <Grid item xs={12}>
           <Presentation />
         </Grid>
       </Grid>
-      <Triptyque content={articlesData}/>
+      <Triptyque content={articlesData} />
       {/* <TestButton /> */}
     </>
   );

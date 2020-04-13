@@ -87,6 +87,8 @@ const Accueil = (props) =>  {
               Si vous souhaitez que Benjamin passe chez vous ou chez un proche
               n'hésitez pas à le contacter par SMS également.
               <br />
+              Possibilité de régler par carte bancaire sous réserve de réseau 4G
+              <br />
               Prenez soin de vous, NE SORTEZ PAS POUR RIEN !
             </h2>
           </Grid>

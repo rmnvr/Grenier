@@ -25,6 +25,9 @@ const styles = theme => ({
   image: {
     width: "70%"
   },
+  imageFrance: {
+    width: "80%"
+  },
   listItem: {
     padding: "0.5vw"
   },
@@ -33,6 +36,12 @@ const styles = theme => ({
       marginTop: "5%",
       marginBottom: "5%"
     }
+  },
+  bottom: {
+    marginTop: "3%",
+    marginBottom: "1%",
+    marginLeft: "20%",
+    marginRight: "20%"
   },
   networks: {
     color: "rgba(255, 255, 255, 0.6)",
@@ -159,6 +168,39 @@ const Footer = ( props ) => {
           </ListItem>
 
         </List>
+      </Grid>
+      <Grid item container justify="space-evenly" className={classes.bottom}>
+        <Grid
+          item
+          container
+          justify="center"
+          alignItems="center"
+          xs={12}
+          sm={3}
+          className={classes.section}
+        >
+        <img
+          src="/images/logo_aude.jpg"
+          alt="logo-aude"
+          className={classes.imageFrance}
+        />
+        </Grid>
+        <Grid
+          item
+          container
+          justify="center"
+          alignItems="center"
+          xs={12}
+          sm={3}
+          className={classes.section}
+        >
+        <img
+          src="/images/republique_française.png"
+          alt="logo-france"
+          className={classes.imageFrance}
+        />
+        </Grid>
+
       </Grid>
     </Grid>
   );

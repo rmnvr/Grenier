@@ -19,7 +19,7 @@ const Triptyque = (props) => {
 
       <Grid item container justify="center" xs={12} sm={6} md={4}>
         <Grid item xs={10} lg={8}>
-          <Fade duration={2000} delay={750}>
+          <Fade duration={2000} delay={350}>
             <MediaCard content={props.content.b} />
           </Fade>
         </Grid>
@@ -27,7 +27,7 @@ const Triptyque = (props) => {
 
       <Grid item container justify="center" xs={12} sm={6} md={4}>
         <Grid item xs={10} lg={8}>
-          <Fade duration={2000} delay={1500}>
+          <Fade duration={2000} delay={700}>
             <MediaCard content={props.content.c} />
           </Fade>
         </Grid>

@@ -20,7 +20,6 @@ function MyCarousel () {
           src="images/car_insideTruck.jpg" 
           alt="Interieur du camion"
         />
-        {/*<p className="legend">Legend 1</p>*/}
       </div>
       <div>
         <img src="images/car_countrySide.jpg" alt="Camion sur route de campagne" />

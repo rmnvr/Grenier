@@ -12,36 +12,36 @@ import InIcon from "../utils/InIcon.js";
 
 // import { HashLink as Link } from "react-router-hash-link";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     backgroundColor: "#0b4553",
     color: "white",
     paddingTop: "10px",
     paddingBottom: "10px",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: "column"
-    }
+      flexDirection: "column",
+    },
   },
   image: {
-    width: "70%"
+    width: "70%",
   },
   imageFrance: {
-    width: "80%"
+    width: "80%",
   },
   listItem: {
-    padding: "0.5vw"
+    padding: "0.5vw",
   },
   section: {
     [theme.breakpoints.down("sm")]: {
       marginTop: "5%",
-      marginBottom: "5%"
-    }
+      marginBottom: "5%",
+    },
   },
   bottom: {
     marginTop: "3%",
     marginBottom: "1%",
     marginLeft: "20%",
-    marginRight: "20%"
+    marginRight: "20%",
   },
   networks: {
     color: "rgba(255, 255, 255, 0.6)",
@@ -49,19 +49,18 @@ const styles = theme => ({
     backgroundColor: "transparent",
     width: "70px",
     height: "70px",
-    margin: "15px"
+    margin: "15px",
   },
   link: {
     color: "white",
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.3vw"
+      fontSize: "1.3vw",
     },
-    textDecoration: "none"
-  }
+    textDecoration: "none",
+  },
 });
 
-const Footer = ( props ) => {
-
+const Footer = (props) => {
   const { classes } = props;
 
   return (
@@ -94,10 +93,7 @@ const Footer = ( props ) => {
         className={classes.section}
       >
         <h4>Contact</h4>
-        <a
-          href="mailto:legrenierdebenjamin@gmail.com"
-          className={classes.link}
-        >
+        <a href="mailto:legrenierdebenjamin@gmail.com" className={classes.link}>
           legrenierdebenjamin@gmail.com
         </a>
         <a href="tel:+33673654525" className={classes.link}>
@@ -166,7 +162,6 @@ const Footer = ( props ) => {
               Commandes
             </Link>
           </ListItem>
-
         </List>
       </Grid>
       <Grid item container justify="space-evenly" className={classes.bottom}>
@@ -176,14 +171,14 @@ const Footer = ( props ) => {
           justify="center"
           alignItems="center"
           xs={12}
-          sm={3}
+          sm={2}
           className={classes.section}
         >
-        <img
-          src="/images/logo_aude.jpg"
-          alt="logo-aude"
-          className={classes.imageFrance}
-        />
+          <img
+            src="/images/logo_occitanie.png"
+            alt="logo-occitanie"
+            className={classes.imageFrance}
+          />
         </Grid>
         <Grid
           item
@@ -194,20 +189,19 @@ const Footer = ( props ) => {
           sm={3}
           className={classes.section}
         >
-        <img
-          src="/images/republique_française.png"
-          alt="logo-france"
-          className={classes.imageFrance}
-        />
+          <img
+            src="/images/republique_française.png"
+            alt="logo-france"
+            className={classes.imageFrance}
+          />
         </Grid>
-
       </Grid>
     </Grid>
   );
-}
+};
 
 Footer.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Footer);

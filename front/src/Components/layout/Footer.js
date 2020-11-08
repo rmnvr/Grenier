@@ -26,7 +26,11 @@ const styles = (theme) => ({
     width: "70%",
   },
   imageFrance: {
-    width: "80%",
+    maxHeight: "90%",
+    width: "auto",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "70vw"
+    },
   },
   listItem: {
     padding: "0.5vw",
@@ -37,6 +41,17 @@ const styles = (theme) => ({
       marginBottom: "5%",
     },
   },
+  logoSection: {
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "5%",
+      marginBottom: "5%",
+
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "10vw"
+    },
+    height: "100px",
+  },
   bottom: {
     [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
@@ -44,8 +59,8 @@ const styles = (theme) => ({
     },
     marginTop: "3%",
     marginBottom: "1%",
-    marginLeft: "20%",
-    marginRight: "20%",
+    marginLeft: "5%",
+    marginRight: "5%",
   },
   networks: {
     color: "rgba(255, 255, 255, 0.6)",
@@ -89,7 +104,7 @@ const Footer = (props) => {
         item
         container
         direction="column"
-        justify="flex-start"
+        justify="center"
         alignItems="center"
         xs={12}
         sm={6}
@@ -108,6 +123,7 @@ const Footer = (props) => {
         item
         container
         justify="center"
+        alignItems="center"
         xs={12}
         sm={6}
         md={3}
@@ -168,15 +184,15 @@ const Footer = (props) => {
           </ListItem>
         </List>
       </Grid>
-      <Grid item container justify="space-evenly" className={classes.bottom}>
+      <Grid item container justify="space-around" className={classes.bottom}>
         <Grid
           item
           container
           justify="center"
           alignItems="center"
-          xs={7}
-          sm={2}
-          className={classes.section}
+          sm={7}
+          md={2}
+          className={classes.logoSection}
         >
           <img
             src="/images/logo_occitanie.png"
@@ -189,9 +205,24 @@ const Footer = (props) => {
           container
           justify="center"
           alignItems="center"
-          xs={7}
-          sm={3}
-          className={classes.section}
+          sm={7}
+          md={7}
+          className={classes.logoSection}
+        >
+          <img
+            src="/images/logo-gal.png"
+            alt="logo-leader"
+            className={classes.imageFrance}
+          />
+        </Grid>
+        <Grid
+          item
+          container
+          justify="center"
+          alignItems="center"
+          sm={7}
+          md={2}
+          className={classes.logoSection}
         >
           <img
             src="/images/republique_française.png"

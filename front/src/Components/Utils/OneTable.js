@@ -31,7 +31,7 @@ function OneTable(props) {
   })
 
   return (
-    <Grid item container justify="center" xs={12} sm={6} md={4}>
+    <Grid item container justify="center" xs={12} sm={6} lg={3}>
       <table className={classes.table}>
         <thead>
           <tr>

@@ -9,7 +9,7 @@ const HorairesPassage = (props) => {
     mardiArray : ["Mardi"],
     mercrediArray : ["Mercredi"],
     jeudiArray : ["Jeudi"],
-    // vendrediArray : ["Vendredi"]
+    vendrediArray : ["Vendredi"]
   }
 
   props.markers.forEach( (village) => {
@@ -23,9 +23,9 @@ const HorairesPassage = (props) => {
       case 'Jeudi':
         week.jeudiArray.push(village);
         break;
-      // case 'Vendredi':
-      //   week.vendrediArray.push(village);
-      //   break;
+      case 'Vendredi':
+        week.vendrediArray.push(village);
+        break;
       default:
         console.log("fail")
     }

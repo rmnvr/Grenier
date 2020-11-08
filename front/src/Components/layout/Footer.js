@@ -38,6 +38,10 @@ const styles = (theme) => ({
     },
   },
   bottom: {
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 0,
+      marginRight: 0,
+    },
     marginTop: "3%",
     marginBottom: "1%",
     marginLeft: "20%",
@@ -170,7 +174,7 @@ const Footer = (props) => {
           container
           justify="center"
           alignItems="center"
-          xs={12}
+          xs={7}
           sm={2}
           className={classes.section}
         >
@@ -185,7 +189,7 @@ const Footer = (props) => {
           container
           justify="center"
           alignItems="center"
-          xs={12}
+          xs={7}
           sm={3}
           className={classes.section}
         >

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Navbar from "./components/layout/Navbar.js";
-import DisplayedPage from "./components/layout/DisplayedPage.js";
-import Footer from "./components/layout/Footer.js";
+import Navbar from "./composants/layout/Navbar.js";
+import DisplayedPage from "./composants/layout/DisplayedPage.js";
+import Footer from "./composants/layout/Footer.js";
 
 class App extends Component {
   render() {

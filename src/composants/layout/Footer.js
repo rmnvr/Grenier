@@ -7,8 +7,8 @@ import Fab from "@material-ui/core/Fab";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import FbIcon from "../utils/FbIcon.js";
-import InIcon from "../utils/InIcon.js";
+import FbIcon from "../utilitaires/FbIcon.js";
+import InIcon from "../utilitaires/InIcon.js";
 
 // import { HashLink as Link } from "react-router-hash-link";
 

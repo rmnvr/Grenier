@@ -1,19 +1,19 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
-import OneTable from "../utils/OneTable"
+import OneTable from "../utilitaires/OneTable"
 
 const HorairesPassage = (props) => {
-  
+
   let week = {
-    mardiArray : ["Mardi"],
-    mercrediArray : ["Mercredi"],
-    jeudiArray : ["Jeudi"],
-    vendrediArray : ["Vendredi"]
+    mardiArray: ["Mardi"],
+    mercrediArray: ["Mercredi"],
+    jeudiArray: ["Jeudi"],
+    vendrediArray: ["Vendredi"]
   }
 
-  props.markers.forEach( (village) => {
-    switch( village.day ) {
+  props.markers.forEach((village) => {
+    switch (village.day) {
       case 'Mardi':
         week.mardiArray.push(village);
         break;
@@ -33,7 +33,7 @@ const HorairesPassage = (props) => {
 
   let weekTable = (oneWeek) => {
     let oneWeekArray = Object.values(oneWeek)
-    let html = oneWeekArray.map( (day, i) => {
+    let html = oneWeekArray.map((day, i) => {
       return <OneTable title={day[0]} data={day} key={i} />
     })
     return html

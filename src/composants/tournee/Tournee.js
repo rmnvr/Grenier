@@ -2,11 +2,11 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 
-import OffsetAnchor from "../utils/OffsetAnchor.js";
+import OffsetAnchor from "../utilitaires/OffsetAnchor.js";
 import HorairesPassage from "./HorairesPassage.js";
-import MyMap from "../utils/MyMap.js";
+import MyMap from "../utilitaires/MyMap.js";
 
-import markers from "../utils/markers.js"
+import markers from "../utilitaires/markers.js"
 
 // import { Helmet } from "react-helmet";
 

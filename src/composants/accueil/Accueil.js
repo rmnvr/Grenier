@@ -7,9 +7,9 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 import MyCarousel from "./MyCarousel.js";
 import Presentation from "./Presentation.js";
 
-import OffsetAnchor from "../utils/OffsetAnchor.js";
-import Triptyque from "../utils/Triptyque.js";
-import articlesData from "../utils/articlesData.js"
+import OffsetAnchor from "../utilitaires/OffsetAnchor.js";
+import Triptyque from "../utilitaires/Triptyque.js";
+import articlesData from "../utilitaires/articlesData.js"
 
 // import { Helmet } from "react-helmet";
 
@@ -47,7 +47,7 @@ const styles = theme => ({
   }
 });
 
-const Accueil = (props) =>  {
+const Accueil = (props) => {
 
   const { classes } = props;
 

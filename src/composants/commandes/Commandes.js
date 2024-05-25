@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
-import OffsetAnchor from "../utils/OffsetAnchor.js";
+import OffsetAnchor from "../utilitaires/OffsetAnchor.js";
 // import { Helmet } from "react-helmet";
 
 const styles = theme => ({
@@ -35,7 +35,7 @@ const styles = theme => ({
   }
 });
 
-const Commandes = ( props ) => {
+const Commandes = (props) => {
 
   const { classes } = props;
 

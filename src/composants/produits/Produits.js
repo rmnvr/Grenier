@@ -2,10 +2,10 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 
-import TableGenerator from "../utils/TableGenerator"
-import OffsetAnchor from "../utils/OffsetAnchor.js";
-import products from "../utils/productsData"
-import sort from "../functions/sort"
+import TableGenerator from "../utilitaires/TableGenerator.js"
+import OffsetAnchor from "../utilitaires/OffsetAnchor.js";
+import products from "../utilitaires/productsData.js"
+import sort from "../functions/sort.js"
 
 // import { Helmet } from "react-helmet";
 
@@ -30,7 +30,7 @@ const styles = theme => ({
   }
 });
 
-const Produits = ( props ) => {
+const Produits = (props) => {
 
   const { classes } = props;
 
